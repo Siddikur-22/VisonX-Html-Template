@@ -195,51 +195,18 @@
 		},
 	});
 
-// Home4 Testimonial Slider
-	var swiper = new Swiper(".home4-testimonial-slider", {
+  	// Home5 Testimonial Slider
+	var swiper = new Swiper(".home-one-testimonial-slider", {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 25,
-		loop: true,
 		autoplay: {
 			delay: 2500, // Autoplay duration in milliseconds
 			disableOnInteraction: false,
 		},
-		pagination: {
-			el: ".swiper-pagination1",
-			clickable: true,
-		},
 		navigation: {
-		  nextEl: ".testimonial-slider-next",
-		  prevEl: ".testimonial-slider-prev",
-		},
-	
-		breakpoints: {
-		  280: {
-			slidesPerView: 1,
-		  },
-		  386: {
-			slidesPerView: 1,
-		  },
-		  576: {
-			slidesPerView: 1,
-		  },
-		  768: {
-			slidesPerView: 2,
-		  },
-		  992: {
-			slidesPerView: 2,
-			centeredSlides: false,
-		  },
-		  1200: {
-			slidesPerView: 3,
-			spaceBetween: 15,
-			centeredSlides: true,
-		  },
-		  1400: {
-			slidesPerView: 3,
-			centeredSlides: true,
-		  },
+			nextEl: ".testimonial-slider-next",
+			prevEl: ".testimonial-slider-prev",
 		},
 	});
   // side menu
