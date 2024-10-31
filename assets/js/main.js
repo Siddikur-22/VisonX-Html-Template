@@ -153,7 +153,7 @@
 	var swiper = new Swiper(".home1-testimonial-slider", {
 		slidesPerView: 1,
 		speed: 1500,
-		spaceBetween: 25,
+		spaceBetween:25,
 		loop: true,
 		centeredSlides: true,
 		autoplay: {
