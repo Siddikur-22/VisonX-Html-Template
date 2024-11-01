@@ -152,13 +152,13 @@
 	// testimonial Slider
 	var swiper = new Swiper(".home1-testimonial-slider", {
 		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween:25,
+		speed: 2500,
+		spaceBetween:30,
 		loop: true,
 		centeredSlides: true,
 		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
+			delay: 1000, // Autoplay duration in milliseconds
+			disableOnInteraction: true,
 		},
 		pagination: {
 			el: ".swiper-pagination1",
@@ -190,7 +190,7 @@
 			spaceBetween: 15,
 		  },
 		  1400: {
-			slidesPerView: 4,
+			slidesPerView: 5,
 		  },
 		},
 	});
