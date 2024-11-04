@@ -155,7 +155,7 @@
 		speed: 2500,
 		spaceBetween:30,
 		loop: true,
-		centeredSlides: true,
+		// centeredSlides: true,
 		autoplay: {
 			delay: 1000, // Autoplay duration in milliseconds
 			disableOnInteraction: true,
@@ -190,7 +190,7 @@
 			spaceBetween: 15,
 		  },
 		  1400: {
-			slidesPerView: 5,
+			slidesPerView: 4.5,
 		  },
 		},
 	});
