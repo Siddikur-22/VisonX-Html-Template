@@ -85,6 +85,14 @@
     duplicated: true,
     startVisible: true,
   });
+  $(".marquee_text-two").marquee({
+    direction: "right",
+    duration: 20000,
+    gap: 50,
+    delayBeforeStart: 0,
+    duplicated: true,
+    startVisible: true,
+  });
   function scrollTo() {
     $(window).scrollTo({ top: 0, behavior: "smooth" });
   }
