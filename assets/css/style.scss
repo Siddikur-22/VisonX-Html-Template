@@ -9,8 +9,8 @@
   --theme-color-gray: rgba(245, 240, 234, 1);
   --white-color: rgba(245, 240, 234, 1);
   --white-color-pure: rgba(255, 255, 255, 1);
-  --white-color-dark: rgba(224, 224, 224, 1);
-  --title-color-1: rgba(0, 0, 0, 1);
+  --white-color-dark: rgba(255, 255, 255, 0.7);
+  --title-color-1: rgba(17, 17, 17, 1);
   --faq-back-color: rgba(254, 94, 58, 0.05);
   --primary-faq-color: rgba(254, 94, 58, 0.2);
   --primary-color: rgba(254, 94, 58, 1);
@@ -18,7 +18,7 @@
   --primary-color-2: rgba(248, 130, 103, 1);
   --primary-color-opp: rgba(254, 94, 58, 0.5);
   --primary-color-opp-2: rgba(254, 94, 58, 0.1);
-  --paragraph-color-1: rgba(85, 85, 85, 1);
+  --paragraph-color-1: rgba(102, 102, 102, 1);
   --paragraph-color-2: rgba(224, 224, 224, 1);
   --paragraph-color-3: rgba(204, 204, 204, 1);
   --span-color: rgba(102, 102, 102, 1);
@@ -170,7 +170,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-Kanit);
-  color: var(--title-color);
+  color: var(--title-color-1);
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
@@ -346,7 +346,12 @@ ul {
 .pt-117 {
   padding-top: 117px;
 }
-
+.pt-100{
+  padding-top: 100px;
+  @include fifteen-down-device(){
+    padding-top: 70px;
+  }
+}
 .pt-110 {
   padding-top: 110px;
 
@@ -534,41 +539,32 @@ ul {
 
 .pb-170 {
   padding-bottom: 170px;
-}
-
-.pt-120 {
-  padding-top: 120px;
-
-  @include lg-device() {
-    padding-top: 100px;
-  }
-
-  @include lg-down-device() {
-    padding-top: 90px;
-  }
-
-  @include md-down-device() {
-    padding-top: 70px;
+  @include fifteen-down-device(){
+    padding-bottom: 150px;
   }
 }
+
 
 .pt-170 {
   padding-top: 170px;
+  @include fifteen-down-device(){
+    padding-top: 150px;
+  }
 }
 
 .pb-120 {
   padding-bottom: 120px;
 
   @include lg-device() {
-    padding-bottom: 100px;
-  }
-
-  @include lg-down-device() {
     padding-bottom: 80px;
   }
 
-  @include md-down-device() {
+  @include lg-down-device() {
     padding-bottom: 60px;
+  }
+
+  @include md-down-device() {
+    padding-bottom: 50px;
   }
 }
 
@@ -596,13 +592,7 @@ ul {
   padding-bottom: 70px;
 }
 
-.pt-100 {
-  padding-top: 120px;
 
-  @include lg-down-device() {
-    padding-top: 80px;
-  }
-}
 
 .pb4-100 {
   padding-bottom: 100px;
@@ -611,9 +601,9 @@ ul {
 .pb-100 {
   padding-bottom: 100px;
 
-  @include lg-down-device() {
-    padding-bottom: 80px;
-  }
+ @include fifteen-down-device(){
+  padding-bottom: 70px;
+ }
 }
 
 .pt-95 {
@@ -688,6 +678,12 @@ ul {
 
 .mb-8 {
   margin-bottom: 8px;
+  @include md-device(){
+    margin-bottom: 15px;
+  }
+  @include md-down-device(){
+    margin-bottom: 15px;
+  }
 }
 
 .mb-20 {
@@ -909,14 +905,6 @@ ul {
 
 .pt-95 {
   padding-top: 95px;
-}
-
-.pt-120 {
-  padding-top: 120px;
-
-  @include xl-down-device() {
-    padding-top: 80px;
-  }
 }
 
 .pt-80 {
@@ -1270,47 +1258,6 @@ ul {
     }
 
   }
-
-  &.line {
-    .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: rgba(17, 17, 17, 0.25);
-      display: block;
-      position: absolute;
-      top: 46%;
-      right: 299%;
-
-      @include xxl-down-device() {
-        right: 215%;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 200%;
-      height: 1px;
-      background-color: rgba(17, 17, 17, 0.25);
-      top: 50%;
-      right: 0;
-      transform: translateX(-50%);
-
-      @include xxl-down-device() {
-        width: 115%;
-        transform: translateX(-87%);
-      }
-
-      @include md-device() {
-        width: 0;
-      }
-
-      @include sm-down-device() {
-        width: 0;
-      }
-    }
-  }
 }
 
 .primary-btn-three {
@@ -1320,7 +1267,7 @@ ul {
   font-size: 16px;
   line-height: 27px;
   margin: 0;
-
+  text-transform: capitalize;
   svg {
     margin-left: 7px;
   }
@@ -1397,7 +1344,7 @@ ul {
 
 
     @include xxl-down-device() {
-      font-size: 44px;
+      font-size: 37px;
       line-height: 1.2;
     }
 
@@ -1406,8 +1353,9 @@ ul {
     }
 
     @include sm-down-device() {
-      font-size: 35px;
+      font-size: 33px;
     }
+   
 
   }
 
@@ -1440,7 +1388,7 @@ ul {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.48px;
-    color: var(--span-color);
+    color: var(--paragraph-color-1);
     margin: 0;
 
     &.two {
@@ -1449,16 +1397,13 @@ ul {
   }
 
   &.style-2 {
-
-    // max-width: 502px;
-    // width: 100%;
     h2 {
       text-transform: capitalize;
       font-size: 47px;
       line-height: 60px;
 
       @include fifteen-down-device() {
-        font-size: 45px;
+        font-size: 42px;
       }
 
       @include xl-down-device() {
@@ -1467,12 +1412,14 @@ ul {
       }
 
       @include md-device() {
-        font-size: 26px;
+        font-size: 36px;
         line-height: 1.1;
+        padding-bottom: 20px;
       }
 
       @include sm-down-device() {
-        font-size: 25px;
+        font-size: 34px;
+        padding-bottom: 20px;
       }
 
       @include sm-mobile-device() {
@@ -2038,13 +1985,13 @@ ul {
         list-style: none;
         margin: 0;
         padding: 0;
-        display: flex;
-        gap: 40px;
-
+     
+        
         @include xxl-down-device() {
           display: block;
+        
         }
-
+       
         >li {
           display: inline-block;
           position: relative;
@@ -3181,10 +3128,15 @@ ul {
       }
 
       @include seventeen-down-device() {
-        font-size: 55px;
+        font-size: 50px;
       }
-
-      >span {
+      @include sm-device(){
+        font-size: 40px;
+      }
+      @include sm-down-device(){
+        font-size: 41px;
+      }
+        >span {
         color: var(--primary-color);
 
         @include fifteen-down-device() {
@@ -3195,7 +3147,9 @@ ul {
         @include xxl-down-device() {
           font-size: 40px;
         }
-
+        @include sm-device(){
+          font-size: 31px;
+        }
         @include sm-down-device() {
           font-size: 33px;
           line-height: 1.2;
@@ -3301,6 +3255,9 @@ ul {
     @include lg-down-device() {
       padding-top: 50px;
     }
+  @include md-device(){
+    padding-top: 0;
+  }
   }
 
 }
@@ -3323,6 +3280,7 @@ ul {
 
     @include seventeen-down-device() {
       left: 48%;
+      bottom: 20%;
     }
 
     @include xxl-device() {
@@ -3414,14 +3372,8 @@ ul {
   }
 
   @include lg-down-device() {
-    bottom: 65%;
-    right: 5%;
+  display: none;
   }
-
-  @include sm-down-device() {
-    bottom: 55%;
-  }
-
   li {
     display: flex;
     align-items: center;
@@ -3440,7 +3392,6 @@ ul {
         bottom: -45%;
         right: 35%;
       }
-
       i {
         color: rgba(var(--title-color-opc), 0.6);
         font-size: 18px;
@@ -3519,7 +3470,7 @@ ul {
           font-family: var(--font-Kanit);
           font-weight: 300;
           font-size: 15px;
-          line-height: 26px;
+          line-height: 24px;
           color: var(--paragraph-color-1);
           max-width: 436px;
           width: 100%;
@@ -3633,13 +3584,20 @@ ul {
         margin-left: 30px;
         border-right: 1px solid var(--border-color-3);
         padding: 30px;
-
+        @include sm-down-device(){
+          padding: 0;
+        }
+        @include fifteen-down-device(){
+          margin-left: 0;
+        }
         @include md-device() {
           margin-left: 0;
+          padding: 25px 12px 0px;
         }
 
         @include sm-down-device() {
           margin-left: 0;
+          border-right: 0;
         }
 
         h2 {
@@ -3664,6 +3622,18 @@ ul {
         font-weight: 500;
         margin-left: 70px;
         padding: 30px;
+        @include fifteen-down-device(){
+          margin-left: 20px;
+        }
+       @include md-device(){
+        padding:20px 0;
+        font-size: 28px;
+       }
+       @include sm-down-device(){
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+       }
       }
 
       .content {
@@ -3676,9 +3646,12 @@ ul {
           max-width: 240px;
           width: 100%;
           padding: 30px 0;
-
+          @include md-down-device(){
+            padding: 20px;
+          }
           @include sm-down-device() {
-            padding-bottom: 20px;
+            padding-bottom:0px;
+            padding: 0;
             max-width: 400px;
             width: 100%;
           }
@@ -3689,7 +3662,9 @@ ul {
         margin-right: 30px;
         padding: 30px;
         border-left: 1px solid var(--border-color-3);
-
+        @include md-down-device(){
+          padding: 20px 10px;
+        }
         @include md-device() {
           margin-right: 0;
         }
@@ -3716,9 +3691,8 @@ ul {
         }
 
         @include sm-down-device() {
-          display: flex;
-          align-items: center;
-          justify-content: end;
+       
+          border-left: 0;
         }
       }
 
@@ -4402,7 +4376,9 @@ ul {
                 font-weight: 700;
                 background: var(--primary-faq-color);
                 color: var(--title-color-1);
-
+                @include sm-down-device(){
+                  right: 5px;
+                }
               }
 
               &:not(.collapsed) {
@@ -4607,7 +4583,7 @@ ul {
 
         img {
           transition: all 0.5s ease-out;
-
+          width: 100%;
           @include lg-down-device() {
             width: 100%;
           }
@@ -4728,15 +4704,6 @@ ul {
           font-weight: 500;
           line-height: 30px;
           transition: 0.5s;
-
-          @include fifteen-down-device() {
-            font-size: 21px;
-          }
-
-          @include lg-down-device() {
-            font-size: 20px;
-          }
-
           @include lg-device() {
             font-size: 17px;
           }
@@ -5275,7 +5242,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap;
     .banner-content {
 
       h1 {
@@ -5795,7 +5762,9 @@ ul {
           position: relative;
 
           svg {
-            fill: var(--title-color);
+           path{
+            fill: var(--white-color);
+           }
           }
         }
       }
@@ -5845,11 +5814,10 @@ ul {
         padding: 0;
         display: flex;
         gap: 40px;
-
         @include xxl-down-device() {
           display: block;
         }
-
+        
         >li {
           display: inline-block;
           position: relative;
@@ -7427,7 +7395,7 @@ ul {
     }
 
     &:hover {
-      background-color: rgba(37, 37, 37, 1);
+      background-color:var(--title-color-1);
       transition: 0.5s;
 
       .pricing-top {
