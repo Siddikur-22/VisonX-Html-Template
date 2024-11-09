@@ -218,7 +218,66 @@
 		},
 	});
   // side menu
-
+// testimonials right side start
+// testimonial Slider
+var swiper = new Swiper(".home1-testimonial-slider", {
+  slidesPerView: 1,
+  speed: 1500,
+  spaceBetween: 25,
+  // loop: true,
+      effect: 'fade',             // Use the fade effect
+  fadeEffect: {
+    crossFade: true           // Enable cross-fade transition
+  },
+  autoplay: {
+    delay: 2500, // Autoplay duration in milliseconds
+    disableOnInteraction: false,
+  },
+  navigation: {
+  nextEl: ".testimonial-slider-next",
+  prevEl: ".testimonial-slider-prev",
+  },
+});
+// testimonials right side end
+// team swiper slider start
+	// Home2 Team Slider
+	var swiper = new Swiper(".home2-team-slider", {
+		slidesPerView: 1,
+		speed: 1500,
+		spaceBetween: 25,
+		autoplay: {
+			delay: 2500, // Autoplay duration in milliseconds
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: ".swiper-pagination2",
+			clickable: true,
+		},
+		breakpoints: {
+		  280: {
+			slidesPerView: 1,
+		  },
+		  386: {
+			slidesPerView: 1,
+		  },
+		  576: {
+			slidesPerView: 2,
+		  },
+		  768: {
+			slidesPerView: 2,
+		  },
+		  992: {
+			slidesPerView: 3,
+		  },
+		  1200: {
+			slidesPerView: 4,
+		  },
+		  1400: {
+			slidesPerView: 4,
+		  },
+		},
+	});
+// team swiper slider end
   // Preloader
   jQuery(window).on("load", function () {
     $(".preloader").delay(1600).fadeOut("slow");
