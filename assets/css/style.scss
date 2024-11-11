@@ -7524,7 +7524,7 @@ ul {
 
 // home1-pricing-section end
 // work process section start
-.wrok-process-section{
+.work-process-section{
   .process-card{
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
     padding: 42px 38px ;
@@ -7620,7 +7620,7 @@ ul {
     .single-widget {
       padding: 35px 35px;
       border-radius: 5px;
-      border: 1px solid var(--border-color-2);
+      background-color:var(--white-color-pure);
 
       @include lg-device() {
         padding: 30px 20px;
@@ -8887,8 +8887,7 @@ ul {
       }
 
       .inquiry-form {
-        background: var(--white-color);
-        border: 1px solid rgba(var(--title-color-opc), 0.1);
+        background-color: var(--white-color-pure);
         box-shadow: 0px 0px 25px 0px #7572FD14;
         padding: 45px 55px;
         border-radius: 20px;
@@ -8917,7 +8916,7 @@ ul {
           }
 
           input {
-            background: var(--white-color);
+            background: var(--white-color-pure);
             color: var(--title-color);
             font-family: var(--font-inter);
             font-size: 14px;
@@ -8940,7 +8939,7 @@ ul {
           }
 
           textarea {
-            background: var(--white-color);
+            background:var(--white-color-pure);
             color: var(--title-color);
             font-family: var(--font-syne);
             font-size: 14px;
@@ -9040,8 +9039,8 @@ ul {
     .single-widget {
       padding: 35px 35px;
       border-radius: 5px;
-      border: 1px solid var(--border-color-2);
-
+      background-color: var(--white-color-pure);
+      box-shadow: 0px 0px 25px 0px rgba(232, 232, 232, 0.325) ;
       @include lg-device() {
         padding: 30px 20px;
       }
@@ -9225,8 +9224,8 @@ ul {
           font-weight: 400;
           color: var(--border-color);
           height: 60px;
-          border-radius: 5px;
-          border: 1px solid rgba(var(--primary-color-opc), 0.3);
+          border-radius: 5px 0 0 5px ;
+          border: 1px solid var(--border-color-2);
 
           &:focus {
             border: 1px solid #ddd;
@@ -9337,7 +9336,7 @@ ul {
     .social-area{
       padding: 35px 35px;
       border-radius: 5px;
-      border: 1px solid var(--border-color-2);
+      background-color:var(--white-color-pure);
       @include lg-device(){
         padding-top: 40px;
       }

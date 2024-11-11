@@ -6464,17 +6464,17 @@ ul {
   z-index: 1;
 }
 
-.wrok-process-section .process-card {
+.work-process-section .process-card {
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
   padding: 42px 38px;
   background-color: var(--white-color);
   border-radius: 10px;
   position: relative;
 }
-.wrok-process-section .process-card .process-content {
+.work-process-section .process-card .process-content {
   padding-top: 15px;
 }
-.wrok-process-section .process-card .process-content h5 {
+.work-process-section .process-card .process-content h5 {
   color: var(--title-color-1);
   font-family: var(--font-Kanit);
   font-size: 28px;
@@ -6484,17 +6484,17 @@ ul {
   margin-bottom: 15px;
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
-  .wrok-process-section .process-card .process-content h5 {
+  .work-process-section .process-card .process-content h5 {
     font-size: 19px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .wrok-process-section .process-card .process-content h5 {
+  .work-process-section .process-card .process-content h5 {
     font-size: 18px;
     margin-bottom: 8px;
   }
 }
-.wrok-process-section .process-card .process-content p {
+.work-process-section .process-card .process-content p {
   font-family: var(--font-Kanit);
   font-size: 16px;
   line-height: 1.75rem;
@@ -6504,7 +6504,7 @@ ul {
   text-transform: capitalize;
   color: var(--paragraph-color-1);
 }
-.wrok-process-section .process-card .count-no {
+.work-process-section .process-card .count-no {
   position: absolute;
   top: -12%;
   right: 40%;
@@ -6513,7 +6513,7 @@ ul {
   padding: 9px;
   z-index: 1;
 }
-.wrok-process-section .process-card .count-no h5 {
+.work-process-section .process-card .count-no h5 {
   background-color: var(--theme-color-gray);
   border: 1px solid var(--primary-color);
   font-family: var(--font-Kanit);
@@ -6530,7 +6530,7 @@ ul {
   height: 47px;
   width: 47px;
 }
-.wrok-process-section .process-card .line-shape-svg {
+.work-process-section .process-card .line-shape-svg {
   position: absolute;
   top: -16%;
   left: 52%;
@@ -6552,7 +6552,7 @@ ul {
 .blog-grid-sidebar-page .sidebar-area .single-widget {
   padding: 35px 35px;
   border-radius: 5px;
-  border: 1px solid var(--border-color-2);
+  background-color: var(--white-color-pure);
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .blog-grid-sidebar-page .sidebar-area .single-widget {
@@ -7662,8 +7662,7 @@ ul {
   }
 }
 .home1-blog-details-page .comment-area .inquiry-form-area .inquiry-form {
-  background: var(--white-color);
-  border: 1px solid rgba(var(--title-color-opc), 0.1);
+  background-color: var(--white-color-pure);
   box-shadow: 0px 0px 25px 0px rgba(117, 114, 253, 0.0784313725);
   padding: 45px 55px;
   border-radius: 20px;
@@ -7693,7 +7692,7 @@ ul {
   margin-bottom: 10px;
 }
 .home1-blog-details-page .comment-area .inquiry-form-area .inquiry-form .form-inner input {
-  background: var(--white-color);
+  background: var(--white-color-pure);
   color: var(--title-color);
   font-family: var(--font-inter);
   font-size: 14px;
@@ -7717,7 +7716,7 @@ ul {
   border: 1px solid var(--primary-color);
 }
 .home1-blog-details-page .comment-area .inquiry-form-area .inquiry-form .form-inner textarea {
-  background: var(--white-color);
+  background: var(--white-color-pure);
   color: var(--title-color);
   font-family: var(--font-syne);
   font-size: 14px;
@@ -7803,7 +7802,8 @@ ul {
 .home1-blog-details-page .sidebar-area .single-widget {
   padding: 35px 35px;
   border-radius: 5px;
-  border: 1px solid var(--border-color-2);
+  background-color: var(--white-color-pure);
+  box-shadow: 0px 0px 25px 0px rgba(232, 232, 232, 0.325);
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home1-blog-details-page .sidebar-area .single-widget {
@@ -7969,8 +7969,8 @@ ul {
   font-weight: 400;
   color: var(--border-color);
   height: 60px;
-  border-radius: 5px;
-  border: 1px solid rgba(var(--primary-color-opc), 0.3);
+  border-radius: 5px 0 0 5px;
+  border: 1px solid var(--border-color-2);
 }
 .home1-blog-details-page .sidebar-area .single-widget .search-box input:focus {
   border: 1px solid #ddd;
@@ -8064,7 +8064,7 @@ ul {
 .home1-blog-details-page .sidebar-area .social-area {
   padding: 35px 35px;
   border-radius: 5px;
-  border: 1px solid var(--border-color-2);
+  background-color: var(--white-color-pure);
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home1-blog-details-page .sidebar-area .social-area {
