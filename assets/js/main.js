@@ -97,7 +97,21 @@
     $(window).scrollTo({ top: 0, behavior: "smooth" });
   }
   // logo area marquee end
+// circle run animation start
+const element = document.querySelectorAll(".badge__char");
+const step = 360/element.length;
 
+element.forEach((elem, i) => {
+elem.style.setProperty('--char-rotate', (i * step) + 'deg');
+})
+
+const foo = (360 / 7);
+
+for (let i = 0; i <= 7; i++) {
+console.log((i * foo) + 'deg');
+}
+
+// circle run animation end
 
   // home 3 testimonial section start
   var swiper = new Swiper(".testimonial-swiper-slide", {
@@ -156,52 +170,6 @@
   $(".search-close").on("click", function (e) {
     $(".search-input").removeClass("active");
   });
-
-	// testimonial Slider
-	var swiper = new Swiper(".home1-testimonial-slider", {
-		slidesPerView: 1,
-		speed: 2500,
-		spaceBetween:30,
-		loop: true,
-		// centeredSlides: true,
-		autoplay: {
-			delay: 1000, // Autoplay duration in milliseconds
-			disableOnInteraction: true,
-		},
-		pagination: {
-			el: ".swiper-pagination1",
-			clickable: true,
-		},
-		navigation: {
-		  nextEl: ".testimonial-slider-next",
-		  prevEl: ".testimonial-slider-prev",
-		},
-	
-		breakpoints: {
-		  280: {
-			slidesPerView: 1,
-		  },
-		  386: {
-			slidesPerView: 1,
-		  },
-		  576: {
-			slidesPerView: 1,
-		  },
-		  768: {
-			slidesPerView: 2,
-		  },
-		  992: {
-			slidesPerView: 2,
-		  },
-		  1200: {
-			slidesPerView: 4,
-			spaceBetween: 15,
-		  },
-		  1400: {
-			slidesPerView: 4.5,
-		  },
-		},
-	});
 
   	// Home5 Testimonial Slider
 	var swiper = new Swiper(".home-one-testimonial-slider", {

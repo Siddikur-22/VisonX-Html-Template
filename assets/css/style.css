@@ -478,7 +478,7 @@ ul {
 }
 
 .pb-50 {
-  padding-bottom: 54px;
+  padding-bottom: 50px;
 }
 
 .pb-54 {
@@ -2654,6 +2654,11 @@ ul {
 }
 @media (max-width: 1399px) {
   .home1-banner-section {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 576px) {
+  .home1-banner-section {
     padding: 0 30px;
   }
 }
@@ -2752,7 +2757,7 @@ ul {
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
-  letter-spacing: 1%;
+  letter-spacing: 0.16px;
   max-width: 688px;
   width: 100%;
   margin-bottom: 48px;
@@ -2837,7 +2842,7 @@ ul {
   border-radius: 100%;
   animation: identifier 20s linear infinite;
   position: absolute;
-  bottom: 15%;
+  bottom: 13%;
   left: 48%;
   z-index: 9999;
   background-color: var(--title-color-1);
@@ -2856,8 +2861,8 @@ ul {
 }
 @media (max-width: 1399px) {
   .video-area .badge {
-    left: 50%;
-    bottom: 20%;
+    left: 47%;
+    bottom: 15%;
   }
 }
 @media (max-width: 1199px) {
@@ -2881,12 +2886,14 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--primary-color);
 }
 .video-area .badge .play .play-icon {
   text-align: center;
+  padding: 10px;
 }
 .video-area .badge .play .play-icon i {
-  font-size: 45px;
+  font-size: 35px;
   color: var(--white-color);
 }
 .video-area .badge .badge__char {
@@ -2906,6 +2913,7 @@ ul {
   font-family: var(--font-Kanit);
   transform-origin: bottom center;
   transform: rotate(var(--char-rotate));
+  padding: 5px;
 }
 @media (max-width: 1199px) {
   .video-area .badge .badge__char {
@@ -2923,8 +2931,8 @@ ul {
 
 .social-list-team.two {
   position: absolute;
-  bottom: 40%;
-  right: 2%;
+  bottom: 35%;
+  right: 3%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -2934,6 +2942,11 @@ ul {
   .social-list-team.two {
     bottom: 35%;
     right: 3%;
+  }
+}
+@media (max-width: 1399px) {
+  .social-list-team.two {
+    right: 1%;
   }
 }
 @media (max-width: 991px) {
@@ -3330,6 +3343,11 @@ ul {
   padding: 48px 23px;
   border-radius: 10px;
 }
+@media (max-width: 1399px) {
+  .home1-latest-project-section .project-content {
+    padding: 23px;
+  }
+}
 .home1-latest-project-section .project-content .section-title {
   max-width: 400px;
   width: 100%;
@@ -3349,6 +3367,21 @@ ul {
   background-size: cover;
   position: relative;
   padding: 100px 109px 100px 16%;
+}
+@media (max-width: 1699px) {
+  .home1-news-and-testimonial {
+    padding: 100px 109px 100px 12%;
+  }
+}
+@media (max-width: 1499px) {
+  .home1-news-and-testimonial {
+    padding: 100px 30px 100px 7%;
+  }
+}
+@media (max-width: 1399px) {
+  .home1-news-and-testimonial {
+    padding: 100px 10px 100px 2%;
+  }
 }
 .home1-news-and-testimonial .section-title h2 {
   margin-bottom: 16px;
@@ -3396,10 +3429,20 @@ ul {
   padding: 46px 60px;
   height: 100%;
 }
+@media (max-width: 350px) {
+  .home1-news-and-testimonial .testimonial-content-wrap {
+    padding: 20px 15px;
+  }
+}
 .home1-news-and-testimonial .testimonial-content-wrap .testimonial-card2 {
   background-color: var(--white-color);
   padding: 29px 43px;
   border-radius: 10px;
+}
+@media (max-width: 350px) {
+  .home1-news-and-testimonial .testimonial-content-wrap .testimonial-card2 {
+    padding: 20px 15px;
+  }
 }
 .home1-news-and-testimonial .testimonial-content-wrap .testimonial-card2 .quote-icon {
   margin-bottom: 16px;
@@ -3419,6 +3462,7 @@ ul {
 @media (max-width: 576px) {
   .home1-news-and-testimonial .testimonial-content-wrap .testimonial-card2 .testimonial-content > span {
     font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 40px;
   }
 }
@@ -3782,38 +3826,38 @@ ul {
   padding-top: 35px;
 }
 
-.faq-section {
+.home1-faq-section {
   position: relative;
 }
-.faq-section .section-title h2 {
+.home1-faq-section .section-title h2 {
   margin-bottom: 16px;
 }
-.faq-section .faq-area .section-title-and-filter {
+.home1-faq-section .faq-area .section-title-and-filter {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 767px) {
-  .faq-section .faq-area .section-title-and-filter {
+  .home1-faq-section .faq-area .section-title-and-filter {
     flex-wrap: wrap;
     gap: 20px;
   }
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item {
   border-radius: 10px;
   border: none;
   margin-bottom: 30px;
   background-color: transparent;
   border: 1px solid transparent;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item:last-child {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item:last-child {
   margin-bottom: 0;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header {
   border-radius: 10px;
   background-color: transparent;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
   font-family: var(--font-kanit);
   font-size: 22px;
   font-weight: 500;
@@ -3825,16 +3869,16 @@ ul {
   background-color: var(--faq-back-color);
 }
 @media (max-width: 767px) {
-  .faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+  .home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
     font-size: 18px;
   }
 }
 @media (max-width: 576px) {
-  .faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+  .home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
     padding: 15px 45px 15px 15px;
   }
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button::after {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button::after {
   flex-shrink: 0;
   width: unset;
   height: unset;
@@ -3860,17 +3904,18 @@ ul {
   color: var(--title-color-1);
 }
 @media (max-width: 576px) {
-  .faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button::after {
+  .home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button::after {
+    background: none;
     right: 5px;
   }
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   box-shadow: none;
   background-color: var(--faq-back-color);
   color: var(--title-color-1);
   border-radius: 10px 10px 0 0;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
   background-image: none;
   transform: unset;
   font-family: bootstrap-icons !important;
@@ -3879,13 +3924,18 @@ ul {
   background-color: var(--primary-faq-color);
   border: none;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:focus {
+@media (max-width: 576px) {
+  .home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+    background: none;
+  }
+}
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:focus {
   border-radius: 10px;
   box-shadow: none;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body {
   padding: 0 79px 30px;
   font-family: var(--font-Kanit);
   font-size: 16px;
@@ -3897,15 +3947,15 @@ ul {
   border-radius: 0 0 10px 10px;
 }
 @media (max-width: 576px) {
-  .faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body {
+  .home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body {
     padding: 0px 15px 15px 15px;
     font-size: 16px;
   }
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time {
   padding-top: 20px;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time h6 {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time h6 {
   font-family: var(--font-kanit);
   font-size: 18px;
   font-weight: 600;
@@ -3913,18 +3963,18 @@ ul {
   text-align: left;
   color: var(--paragraph-color);
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul {
   padding: 0;
   margin: 0;
   list-style: none;
   margin-top: 15px;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul li {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul li {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul li span {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul li span {
   font-family: var(--font-Kanit);
   font-size: 14px;
   font-weight: 500;
@@ -3933,20 +3983,20 @@ ul {
   color: var(--paragraph-color);
   text-transform: uppercase;
 }
-.faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul li span svg {
+.home1-faq-section .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time ul li span svg {
   fill: var(--paragraph-color);
 }
-.faq-section .faq-area .faq-wrap button {
+.home1-faq-section .faq-area .faq-wrap button {
   white-space: wrap;
 }
-.faq-section .single-widget {
+.home1-faq-section .single-widget {
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding: 24px 32px;
   max-width: 420px;
   width: 100%;
 }
-.faq-section .single-widget .widget-title {
+.home1-faq-section .single-widget .widget-title {
   font-family: var(--font-Kanit);
   font-weight: 500;
   font-size: 28px;
@@ -3956,7 +4006,7 @@ ul {
   border-bottom: 1px solid rgba(17, 17, 17, 0.15);
   padding-bottom: 32px;
 }
-.faq-section .single-widget ul li a span {
+.home1-faq-section .single-widget ul li a span {
   font-family: var(--font-Kanit);
   font-weight: 400;
   font-size: 18px;
@@ -3970,27 +4020,27 @@ ul {
   padding: 24px;
   text-transform: capitalize;
 }
-.faq-section .single-widget ul li a span:hover {
+.home1-faq-section .single-widget ul li a span:hover {
   background-color: var(--primary-color);
   transition: 0.5s;
   color: var(--white-color);
 }
-.faq-section .single-widget ul li a span:hover svg path {
+.home1-faq-section .single-widget ul li a span:hover svg path {
   fill: var(--white-color);
 }
-.faq-section .faq-wrap {
+.home1-faq-section .faq-wrap {
   border-radius: 10px;
 }
 @media (max-width: 576px) {
-  .faq-section .faq-wrap {
+  .home1-faq-section .faq-wrap {
     padding: 10px 10px;
   }
 }
-.faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item {
+.home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item {
   border: 1px solid var(--white-color2);
   border-radius: unset;
 }
-.faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+.home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
   font-family: var(--font-Kanit);
   font-size: 22px;
   font-weight: 700;
@@ -3999,39 +4049,39 @@ ul {
   border-radius: 0px;
 }
 @media (max-width: 991px) {
-  .faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+  .home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
     font-size: 21px;
   }
 }
 @media (max-width: 576px) {
-  .faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+  .home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
     font-size: 18px;
     line-height: 1.4;
   }
 }
-.faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   border-radius: 0px;
   border: 1px solid transparent;
   border-bottom: none;
 }
-.faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-body {
+.home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-body {
   border: none;
   border-radius: 0px;
   border-top: none;
 }
-.faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time h6 {
+.home1-faq-section.style-2 .faq-area .faq-wrap .accordion .accordion-item .accordion-body .opening-time h6 {
   font-family: var(--font-Kanit);
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
   text-align: left;
 }
-.faq-section .faq-right-side-text {
+.home1-faq-section .faq-right-side-text {
   top: 45%;
   right: 5%;
   position: absolute;
 }
-.faq-section .verticle-text h2 {
+.home1-faq-section .verticle-text h2 {
   color: rgba(0, 0, 0, 0.1);
   font-family: var(--font-Kanit);
   font-size: 100px;
@@ -4043,13 +4093,13 @@ ul {
   margin-bottom: 0;
 }
 @media (max-width: 991px) {
-  .faq-section .verticle-text h2 {
+  .home1-faq-section .verticle-text h2 {
     writing-mode: unset;
     font-size: 80px;
   }
 }
 @media (max-width: 767px) {
-  .faq-section .verticle-text h2 {
+  .home1-faq-section .verticle-text h2 {
     font-size: 60px;
   }
 }
@@ -4167,9 +4217,14 @@ ul {
   line-height: 30px;
   transition: 0.5s;
 }
+@media (max-width: 1399px) {
+  .home1-blog-section .blog-card .card-content h4 a {
+    font-size: 21px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .home1-blog-section .blog-card .card-content h4 a {
-    font-size: 17px;
+    font-size: 24px;
   }
 }
 @media (max-width: 576px) {
@@ -4619,6 +4674,11 @@ ul {
   padding: 203px 0px 203px;
   position: relative;
 }
+@media (max-width: 991px) {
+  .breadcrumb-section {
+    padding: 130px 0 130px;
+  }
+}
 .breadcrumb-section .banner-wrapper {
   display: flex;
   align-items: center;
@@ -4650,25 +4710,13 @@ ul {
     font-size: 55px;
   }
 }
+@media (max-width: 576px) {
+  .breadcrumb-section .banner-wrapper .banner-content h1 {
+    font-size: 35px;
+  }
+}
 .breadcrumb-section .banner-wrapper .banner-content h1 > span {
   color: var(--primary-color);
-}
-@media (max-width: 1499px) {
-  .breadcrumb-section .banner-wrapper .banner-content h1 > span {
-    font-size: 55px;
-    line-height: 56px;
-  }
-}
-@media (max-width: 1399px) {
-  .breadcrumb-section .banner-wrapper .banner-content h1 > span {
-    font-size: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .breadcrumb-section .banner-wrapper .banner-content h1 > span {
-    font-size: 33px;
-    line-height: 1.2;
-  }
 }
 .breadcrumb-section .banner-wrapper .banner-content h1 .hero-title-img {
   display: flex;
@@ -4939,7 +4987,7 @@ ul {
   color: var(--white-color);
   font-size: 16px;
   line-height: 1.9;
-  padding: 18px 36px;
+  padding: 13px 36px;
   text-transform: capitalize;
 }
 .home1-contact-section .form-inner2 {
@@ -4974,6 +5022,8 @@ ul {
   font-family: var(--font-Kanit);
   font-size: 14px;
   font-weight: 400;
+  text-transform: capitalize;
+  margin: 0;
 }
 @media (max-width: 576px) {
   .home1-contact-section .form-inner2 .form-check .form-check-label {
@@ -6114,9 +6164,6 @@ ul {
   color: var(--title-color-1);
 }
 
-.home1-portfolio-details .portfolio-details-thumb {
-  height: 96%;
-}
 .home1-portfolio-details .portfolio-details-thumb img {
   height: 100%;
   -o-object-fit: cover;
@@ -6445,6 +6492,7 @@ ul {
   letter-spacing: 0.16px;
   margin: 0;
   text-transform: capitalize;
+  color: var(--paragraph-color-1);
 }
 .wrok-process-section .process-card .count-no {
   position: absolute;
@@ -7009,6 +7057,11 @@ ul {
 @media (max-width: 991px) {
   .blog-grid-sidebar-page .innerpage-pagination-area .paginations {
     gap: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .blog-grid-sidebar-page .innerpage-pagination-area .paginations {
+    gap: 10px;
   }
 }
 .blog-grid-sidebar-page .innerpage-pagination-area .paginations .page-item a {

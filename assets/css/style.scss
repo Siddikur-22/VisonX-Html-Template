@@ -576,7 +576,7 @@ ul {
 }
 
 .pb-50 {
-  padding-bottom: 54px;
+  padding-bottom: 50px;
 }
 
 .pb-54 {
@@ -3065,9 +3065,11 @@ ul {
   padding: 0 106px;
 
   @include xxl-down-device() {
-    padding: 0 30px;
+    padding: 0 50px;
   }
-
+  @include sm-down-device(){
+    padding:0 30px;
+  }
   .banner-content {
     .sub-title {
       a {
@@ -3161,7 +3163,7 @@ ul {
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
-      letter-spacing: 1%;
+      letter-spacing: 0.16px;
       max-width: 688px;
       width: 100%;
       margin-bottom: 48px;
@@ -3251,7 +3253,7 @@ ul {
     border-radius: 100%;
     animation: identifier 20s linear infinite;
     position: absolute;
-    bottom: 15%;
+    bottom: 13%;
     left: 48%;
     z-index: 9999;
     background-color: var(--title-color-1);
@@ -3267,8 +3269,8 @@ ul {
     }
 
     @include xxl-down-device() {
-      left: 50%;
-      bottom: 20%;
+      left: 47%;
+      bottom: 15%;
     }
 
     @include xl-down-device() {
@@ -3290,12 +3292,12 @@ ul {
       display: flex;
       align-items: center;
       justify-content: center;
-
+      background-color: var(--primary-color);
       .play-icon {
         text-align: center;
-
+        padding: 10px;
         i {
-          font-size: 45px;
+          font-size: 35px;
           color: var(--white-color);
         }
       }
@@ -3318,7 +3320,7 @@ ul {
       font-family: var(--font-Kanit);
       transform-origin: bottom center;
       transform: rotate(var(--char-rotate));
-
+      padding: 5px;
       @include xl-down-device() {
         height: calc(110px / 2);
       }
@@ -3338,8 +3340,8 @@ ul {
 
 .social-list-team.two {
   position: absolute;
-  bottom: 40%;
-  right: 2%;
+  bottom: 35%;
+  right: 3%; 
   padding: 0;
   margin: 0;
   list-style: none;
@@ -3349,7 +3351,9 @@ ul {
     bottom: 35%;
     right: 3%;
   }
-
+  @include xxl-down-device(){
+    right: 1%;
+  }
   @include lg-down-device() {
   display: none;
   }
@@ -3733,7 +3737,7 @@ ul {
 // home1-service-section end
 // home1-banner-section end
 // home1-showcase-section start
-.home1-latest-project-section {
+.home1-latest-project-section { 
   position: relative;
 
   .section-title {
@@ -3776,7 +3780,9 @@ ul {
     background-size: cover;
     padding: 48px 23px;
     border-radius: 10px;
-    
+    @include xxl-down-device(){
+      padding: 23px;
+    }
     .section-title {
       max-width: 400px;
       width: 100%;
@@ -3800,6 +3806,15 @@ ul {
   background-size: cover;
   position: relative;
   padding: 100px 109px 100px 16%;
+  @include seventeen-down-device(){
+    padding: 100px 109px 100px 12%;
+  }
+  @include fifteen-down-device(){
+    padding: 100px 30px 100px 7%;
+  }
+  @include xxl-down-device(){
+    padding: 100px 10px 100px 2%;
+  }
   .section-title{
     h2{
       margin-bottom: 16px;
@@ -3858,11 +3873,17 @@ ul {
     border: 3px solid rgba(99, 98, 98, 0.15);
     padding: 46px 60px;
     height: 100%;
-   
+    @include threefifty-down-device(){
+      padding: 20px 15px;
+    }
     .testimonial-card2{
       background-color: var(--white-color);
       padding: 29px 43px;
       border-radius: 10px;
+      @include threefifty-down-device(){
+        padding: 20px 15px;
+
+      }
       .quote-icon{
         margin-bottom: 16px;
       }
@@ -3880,6 +3901,7 @@ ul {
           letter-spacing: 0.16px;
           @include sm-down-device(){
             font-size: 18px;
+            line-height: 1.5;
             margin-bottom: 40px;
           }
         }
@@ -4281,7 +4303,7 @@ ul {
 
 // home1-team-section end
 // home 1 faq section start
-.faq-section {
+.home1-faq-section {
   position: relative;
   .section-title{
     h2{
@@ -4361,6 +4383,7 @@ ul {
                 background: var(--primary-faq-color);
                 color: var(--title-color-1);
                 @include sm-down-device(){
+                  background: none;
                   right: 5px;
                 }
               }
@@ -4380,7 +4403,9 @@ ul {
                   color: var(--title-color-1);
                   background-color: var(--primary-faq-color);
                   border: none;
-
+                  @include sm-down-device(){
+                    background: none;
+                  }
                 }
 
               }
@@ -4732,8 +4757,11 @@ ul {
           font-weight: 500;
           line-height: 30px;
           transition: 0.5s;
+          @include xxl-down-device(){
+            font-size: 21px;
+          }
           @include lg-device() {
-            font-size: 17px;
+            font-size: 24px;
           }
 
           @include sm-down-device() {
@@ -5296,7 +5324,9 @@ ul {
   background-position: center;
   padding: 203px 0px 203px;
   position: relative;
-
+  @include lg-down-device(){
+    padding: 130px 0 130px;
+  }
   .banner-wrapper {
     display: flex;
     align-items: center;
@@ -5326,23 +5356,11 @@ ul {
         @include seventeen-down-device() {
           font-size: 55px;
         }
-
+        @include sm-down-device(){
+          font-size: 35px;
+        }
         >span {
           color: var(--primary-color);
-
-          @include fifteen-down-device() {
-            font-size: 55px;
-            line-height: 56px;
-          }
-
-          @include xxl-down-device() {
-            font-size: 40px;
-          }
-
-          @include sm-down-device() {
-            font-size: 33px;
-            line-height: 1.2;
-          }
 
         }
 
@@ -5658,7 +5676,7 @@ ul {
           color: var(--white-color);
           font-size: 16px;
           line-height: 1.9;
-          padding: 18px 36px;
+          padding: 13px 36px;
           text-transform: capitalize;
         }
       }
@@ -5700,7 +5718,8 @@ ul {
         font-family: var(--font-Kanit);
         font-size: 14px;
         font-weight: 400;
-
+        text-transform: capitalize;
+        margin: 0;
         @include sm-down-device() {
           font-size: 12px;
         }
@@ -5933,6 +5952,7 @@ ul {
             @include xl-down-device() {
               padding: 34px 15px;
             }
+         
           }
 
           i {
@@ -6153,6 +6173,7 @@ ul {
                 min-width: 215px;
                 background: var(--white-color);
                 top: 0;
+                
 
                 &::before {
                   display: none;
@@ -6979,7 +7000,7 @@ ul {
       margin: 0;
       padding-bottom: 24px;
     }
-
+    
     p {
       color: var(--span-color);
     }
@@ -7116,8 +7137,6 @@ ul {
 // home1-portfolio-details start
 .home1-portfolio-details {
   .portfolio-details-thumb {
-    height: 96%;
-
     img {
       height: 100%;
       object-fit: cover;
@@ -7531,7 +7550,7 @@ ul {
         letter-spacing: 0.16px;
         margin: 0;
         text-transform: capitalize;
-
+        color: var(--paragraph-color-1);
       }
     }
     .count-no{
@@ -8189,7 +8208,9 @@ ul {
       @include lg-down-device() {
         gap: 24px;
       }
-
+      @include sm-down-device(){
+       gap: 10px;
+      }
       .page-item {
         a {
           color: var(--title-color-1);
