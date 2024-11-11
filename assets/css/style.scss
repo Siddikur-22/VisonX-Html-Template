@@ -3873,13 +3873,20 @@ ul {
     border: 3px solid rgba(99, 98, 98, 0.15);
     padding: 46px 60px;
     height: 100%;
+    @include md-down-device(){
+      padding: 30px 15px;
+    }
+    @include sm-mobile-device{
+      padding: 30px 15px;
+    }
     @include threefifty-down-device(){
       padding: 20px 15px;
     }
     .testimonial-card2{
       background-color: var(--white-color);
-      padding: 29px 43px;
+      padding: 29px 15px;
       border-radius: 10px;
+     
       @include threefifty-down-device(){
         padding: 20px 15px;
 

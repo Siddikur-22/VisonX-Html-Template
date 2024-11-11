@@ -3429,6 +3429,16 @@ ul {
   padding: 46px 60px;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .home1-news-and-testimonial .testimonial-content-wrap {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 425px) {
+  .home1-news-and-testimonial .testimonial-content-wrap {
+    padding: 30px 15px;
+  }
+}
 @media (max-width: 350px) {
   .home1-news-and-testimonial .testimonial-content-wrap {
     padding: 20px 15px;
@@ -3436,7 +3446,7 @@ ul {
 }
 .home1-news-and-testimonial .testimonial-content-wrap .testimonial-card2 {
   background-color: var(--white-color);
-  padding: 29px 43px;
+  padding: 29px 15px;
   border-radius: 10px;
 }
 @media (max-width: 350px) {
