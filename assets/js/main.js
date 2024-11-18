@@ -5,6 +5,13 @@
 (function ($) {
   "use strict";
 
+
+  	//Counter up
+	// $('.counter').counterUp({
+	// 	delay: 10,
+	// 	time: 1500
+	// });
+
   // logo area marquee start
   $(".marquee_text").marquee({
     direction: "left",
