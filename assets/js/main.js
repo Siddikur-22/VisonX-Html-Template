@@ -6,17 +6,26 @@
   "use strict";
 
   const element = document.querySelectorAll(".badge__char");
-  const step = 360/element.length;
-  
+  const step = 360 / element.length;
+
   element.forEach((elem, i) => {
-  elem.style.setProperty('--char-rotate', (i * step) + 'deg');
-  })
-  
-  const foo = (360 / 7);
-  
+    elem.style.setProperty("--char-rotate", i * step + "deg");
+  });
+
+  const foo = 360 / 7;
+
   for (let i = 0; i <= 7; i++) {
-  console.log((i * foo) + 'deg');
+    console.log(i * foo + "deg");
   }
+
+	// //Counter up
+	// $('.counter').counterUp({
+	// 	delay: 10,
+	// 	time: 1500
+	// });
+
+
+
   // logo area marquee start
   $(".marquee_text").marquee({
     direction: "left",
@@ -34,20 +43,22 @@
     duplicated: true,
     startVisible: true,
   });
-    // logo area marquee end
-      // smooth scroll start
+  // logo area marquee end
+  // smooth scroll start
   function scrollTo() {
     $(window).scrollTo({ top: 0, behavior: "smooth" });
   }
-// smooth scroll end
-	// services Images
-	const serviceImgItem = document.querySelectorAll(".services-wrap .single-services ");
-	console.log(serviceImgItem);
-	function followImageCursor(event, item, rotate = false) {
+  // smooth scroll end
+  // services Images
+  const serviceImgItem = document.querySelectorAll(
+    ".services-wrap .single-services "
+  );
+  console.log(serviceImgItem);
+  function followImageCursor(event, item, rotate = false) {
     const contentBox = item.getBoundingClientRect();
     const dx = event.clientX - contentBox.x;
     const dy = event.clientY - contentBox.y;
-  
+
     const targetElement = item.children[2]; // Adjust index if needed
     if (targetElement) {
       targetElement.style.transform = rotate
@@ -55,32 +66,31 @@
         : `translate(${dx}px, ${dy}px)`;
     }
   }
-  
-	serviceImgItem.forEach((item, i) => {
-	  item.addEventListener("mousemove", (event) => {
-		setInterval(followImageCursor(event, item), 100);
-	  });
-	});
 
-	const serviceImgItem2 = document.querySelectorAll(".services-wrap2 .single-services");
-	console.log(serviceImgItem2);
-	function followImageCursor(event, serviceImgItem2) {
-	  const contentBox = serviceImgItem2.getBoundingClientRect();
-	  const dx = event.clientX - contentBox.x;
-	  const dy = event.clientY - contentBox.y;
-	  serviceImgItem2.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(12deg)`;
-	}
-  
-	serviceImgItem2.forEach((item, i) => {
-	  item.addEventListener("mousemove", (event) => {
-		setInterval(followImageCursor(event, item), 100);
-	  });
-	});
+  serviceImgItem.forEach((item, i) => {
+    item.addEventListener("mousemove", (event) => {
+      setInterval(followImageCursor(event, item), 100);
+    });
+  });
 
+  const serviceImgItem2 = document.querySelectorAll(
+    ".services-wrap2 .single-services"
+  );
+  console.log(serviceImgItem2);
+  function followImageCursor(event, serviceImgItem2) {
+    const contentBox = serviceImgItem2.getBoundingClientRect();
+    const dx = event.clientX - contentBox.x;
+    const dy = event.clientY - contentBox.y;
+    serviceImgItem2.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(0deg)`;
+  }
 
+  serviceImgItem2.forEach((item, i) => {
+    item.addEventListener("mousemove", (event) => {
+      setInterval(followImageCursor(event, item), 100);
+    });
+  });
 
-
-// right sidebar start
+  // right sidebar start
 
   // sidebar
   $(".right-sidebar-button").on("click", function () {
@@ -95,9 +105,8 @@
     jQuery(this).parent().siblings().children("ul").slideUp();
     jQuery(this).parent().siblings().children(".active").removeClass("active");
   });
-//  right sidebar end
+  //  right sidebar end
 
- 
   // home1 testimonial Slider start
   var swiper = new Swiper(".home1-testimonial-slider", {
     slidesPerView: 1,
@@ -234,7 +243,6 @@
       stagger: 0.1,
     });
   });
-
   handleResize();
   window.addEventLis;
 })(jQuery);
