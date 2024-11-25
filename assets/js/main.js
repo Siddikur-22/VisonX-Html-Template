@@ -53,6 +53,25 @@
 	requestAnimationFrame(animate);
 	}); 
 
+  
+	//home1-banner-slider
+	var swiper = new Swiper(".banner-img-slider", {
+		slidesPerView: 1,
+		speed: 2500,
+		spaceBetween: 25,
+		effect: 'fade',             // Use the fade effect
+		fadeEffect: {
+		  crossFade: true,           // Enable cross-fade transition
+		},
+		autoplay: {
+			delay: 3000, // Autoplay duration in milliseconds
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: ".home1-banner-next",
+			prevEl: ".home1-banner-prev",
+		},
+	}); 
 
   // logo area marquee start
   $(".marquee_text").marquee({
