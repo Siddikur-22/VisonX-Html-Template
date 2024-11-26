@@ -72,6 +72,63 @@
 			prevEl: ".home1-banner-prev",
 		},
 	}); 
+  // home1 testimonial Slider start
+  var swiper = new Swiper(".home1-testimonial-slider", {
+    slidesPerView: 1,
+    speed: 1500,
+    spaceBetween: 25,
+    // loop: true,
+    effect: "fade", // Use the fade effect
+    fadeEffect: {
+      crossFade: true, // Enable cross-fade transition
+    },
+    autoplay: {
+      delay: 2500, // Autoplay duration in milliseconds
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".testimonial-slider-next",
+      prevEl: ".testimonial-slider-prev",
+    },
+  });
+  // home1 testimonial Slider end
+  // Home1 Team Slider
+  var swiper = new Swiper(".home1-team-slider", {
+    slidesPerView: 1,
+    speed: 1500,
+    spaceBetween: 25,
+    autoplay: {
+      delay: 2500, // Autoplay duration in milliseconds
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination2",
+      clickable: true,
+    },
+    breakpoints: {
+      280: {
+        slidesPerView: 1,
+      },
+      386: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    },
+  });
 
   // logo area marquee start
   $(".marquee_text").marquee({
@@ -154,65 +211,6 @@
   });
   //  right sidebar end
 
-  // home1 testimonial Slider start
-  var swiper = new Swiper(".home1-testimonial-slider", {
-    slidesPerView: 1,
-    speed: 1500,
-    spaceBetween: 25,
-    // loop: true,
-    effect: "fade", // Use the fade effect
-    fadeEffect: {
-      crossFade: true, // Enable cross-fade transition
-    },
-    autoplay: {
-      delay: 2500, // Autoplay duration in milliseconds
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".testimonial-slider-next",
-      prevEl: ".testimonial-slider-prev",
-    },
-  });
-  // home1 testimonial Slider end
-
-  // Home1 Team Slider
-  var swiper = new Swiper(".home1-team-slider", {
-    slidesPerView: 1,
-    speed: 1500,
-    spaceBetween: 25,
-    autoplay: {
-      delay: 2500, // Autoplay duration in milliseconds
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination2",
-      clickable: true,
-    },
-    breakpoints: {
-      280: {
-        slidesPerView: 1,
-      },
-      386: {
-        slidesPerView: 1,
-      },
-      576: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-      1400: {
-        slidesPerView: 4,
-      },
-    },
-  });
-  // Home1 Team Slider
   // Preloader
   jQuery(window).on("load", function () {
     $(".preloader").delay(1600).fadeOut("slow");
