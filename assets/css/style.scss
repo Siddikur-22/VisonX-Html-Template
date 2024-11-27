@@ -2253,9 +2253,7 @@ ul {
   .header-area {
     transition: all 0.8s ease-out 0s;
     background-color: var(--theme-color);
-    position: absolute;
-    z-index: 999;
-    padding: 0 150px;
+    padding:0 150px;
     border-bottom: 1px solid var(--border-color-2);
 
     @include xxl-down-device() {
@@ -3464,7 +3462,6 @@ ul {
 
 .header-area.style-2 {
   width: 100%;
-
   .header-area {
     transition: all 0.8s ease-out 0s;
     background-color: transparent;
@@ -4691,16 +4688,19 @@ ul {
 // Banner content global start
 .home1-banner-section {
   position: relative;
-  padding: 148px 106px 156px 156px;
+  padding: 55px 106px 55px 156px;
   background-image: url("../image/banner-img/home-1-background.png");
   background-position: center;
   background-repeat: no-repeat;
   @include seventeen-down-device(){
-    padding: 148px 70px 40px 30px;
+    padding: 55px 60px 55px 30px;
     background-position: left;
   }
+  @include lg-down-device(){
+    padding: 50px 70px 40px 30px;
+  }
   .banner-content {
-
+  
     span{
       a{
         display: inline-block;
@@ -4744,6 +4744,7 @@ ul {
 
       @include sm-down-device() {
         font-size: 41px;
+        line-height: 35px;
       }
 
       @include threefifty-down-device() {
@@ -4761,10 +4762,7 @@ ul {
         @include xxl-down-device() {
           font-size: 45px;
         }
-        @include sm-down-device() {
-          font-size: 33px;
-          line-height: 1.2;
-        }
+      
 
         @include threefifty-down-device() {
           font-size: 28px;
@@ -4816,12 +4814,9 @@ ul {
         margin-bottom: 25px;
         max-width: 430px;
         width: 100%;
-      }
-
-      @include lg-down-device() {
-        margin-bottom: 35px;
-        max-width: 400px;
-        width: 100%;
+      }    
+      @include lg-down-device(){
+        font-size: 17px;
       }
     }
   }
@@ -4869,6 +4864,9 @@ ul {
   }
 
   .banner-img-wrap{
+    @include md-down-device(){
+    display: none;
+  }
     img{
       border-radius: 15px;
       object-fit: cover;
@@ -4878,10 +4876,11 @@ ul {
       @include lg-device(){
         min-height: 420px;
       }
+      @include sm-down-device(){
+        display: none;
+      }
     }
-    @include lg-down-device(){
-      display: none;
-    }
+ 
   }
 
 }
@@ -4896,7 +4895,7 @@ ul {
     border-radius: 100%;
     animation: identifier 20s linear infinite;
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     left: 49%;
     z-index: 9999;
     background-color: var(--title-color);
@@ -4921,21 +4920,20 @@ ul {
  
     @include xxl-down-device() {
       left: 47%;
-      bottom: 12%;
+      bottom:0%;
     }
 
     @include xl-down-device() {
       width: 110px;
       height: 110px;
       left: 45%;
-      top: 62%;
+      bottom: 0%;
     }
     @include xxl-device() {
       left: 48%;
     }
   
-    @include lg-down-device() {
-
+    @include md-down-device(){
       display: none;
     }
 
@@ -5000,17 +4998,16 @@ ul {
   list-style: none;
   position: absolute;
   top: 50%;
-  right: 2%;
+  right: 3%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 46px;
   z-index: 1;
- @include lg-device(){
-  top: 45%;
- }
- 
+  @include xl-down-device(){
+  top: 50%;
+  }
   li {
     position: relative;
     line-height: 1;
@@ -5083,8 +5080,8 @@ ul {
   @include threefifty-down-device() {
     padding: 100px 0 0 10px;
   }
-
   .banner-content {
+ 
     h1 {
       color: var(--title-color);
       font-family: var(--font-Hanken);
@@ -5377,8 +5374,6 @@ ul {
   }
 
   .banner-img-wrap {
-    margin-bottom: 42px;
-
     img {
       border-radius: 80px 0 0 80px;
 
@@ -5560,9 +5555,6 @@ ul {
 // Banner content global end
 // home1-service-section start
 .home1-about-section {
-  @include seventeen-down-device(){
-    padding-top: 100px;
-  }
   .section-top-content{
     max-width: 555px;
     width: 100%;
@@ -5622,6 +5614,7 @@ ul {
     }
   }
   .about-content {
+    
     @include sm-down-device() {
       margin-top: 50px;
     }
@@ -5685,7 +5678,7 @@ ul {
     border-radius: 5px;
   }
   .about-img-wrap{
-    .work-experience-area{
+  .work-experience-area{
       clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 11% 75%, 0 89%, 0% 75%);
       background-color: var(--primary-color);
       padding: 50px 36px 100px 38px;
@@ -5972,6 +5965,9 @@ ul {
       color: var(--white-color);
       max-width: 563px;
       width: 100%;
+      @include lg-device(){
+        margin-bottom: 20px;
+      }
     @include lg-down-device(){
       margin-bottom: 20px;
     }
@@ -5983,6 +5979,9 @@ ul {
         width: 100%;
         color: rgba(255, 255, 255, 0.7);
         margin-bottom: 30px;
+      @include lg-device(){
+        margin-bottom: 10px;
+      }
       }
       .primary-button {
         color: var(--primary-color);
@@ -6012,9 +6011,17 @@ ul {
       display: grid;
       grid-template-columns: 10% 45% 33% 12%;
       z-index: 1;
-    
+    @include md-down-device(){
+      display: block;
+      border-bottom: none;
+      border: 1px solid var(--border-color-1);
+      padding: 10px;
+    }
       &:last-child {
         border-bottom: none;
+        @include md-down-device(){
+          border-bottom: 1px solid var(--border-color-1);
+        }
       }
 
       .step-no {
@@ -6035,6 +6042,10 @@ ul {
         @include md-device() {
           margin-left: 0;
           padding: 25px 12px 0px;
+        }
+        @include md-down-device(){
+          padding: 0;
+          border-right: none;
         }
         @include sm-down-device() {
           margin-left: 0;
@@ -6060,6 +6071,9 @@ ul {
         max-width: 405px;
         width: 100%;
         margin-bottom: 0;
+        @include md-down-device(){
+          padding: 0;
+        }
         a {
           color: var(--white-color);
           font-family: var(--font-Hanken);
@@ -6144,6 +6158,7 @@ ul {
 
         @include md-down-device() {
           padding: 20px 10px;
+          border-left: none;
         }
 
         @include md-device() {
@@ -6158,7 +6173,6 @@ ul {
           justify-content: center;
           border: 1px solid var(--white-color);
           border-radius: 50%;
-
           @include xxl-down-device() {
             height: 50px;
             width: 50px;
@@ -7103,56 +7117,43 @@ ul {
 // home1-showcase-section start
 .home1-latest-project-section {
   position: relative;
-
-  .section-title-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .section-title{
     h2{
-      color: var(--title-color);
-      max-width: 563px;
+      max-width: 550px;
       width: 100%;
-    @include lg-down-device(){
-      margin-bottom: 20px;
-    }
-    }
-    .right-content{
-     
-      p{
-        max-width: 475px;
-        width: 100%;
-        color:var(--paragraph-color-1);
-        margin-bottom: 30px;
-        font-family: var(--font-Instrument);
-      }
-      .primary-button {
-        color: var(--primary-color);
-        text-decoration: underline;
-    
-        &:hover {
-          color: var(--white-color);
-    
-          svg {
-            transform: rotate(45deg);
-    
-            path {
-              fill: var(--white-color);
-            }
-          }
-        }
-      }
     }
   }
-
   .project-card-image {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
     height: 100%;
-    object-fit: cover;
-
     img {
-      border-radius: 10px;
       height: 100%;
+      object-fit: cover;
 
+    }
+    &::after{
+      position: absolute;
+      width: 500%;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) rotate(-45deg);
+      content: "";
+      z-index: 1;
+    }
+    &:hover {
+      img {
+        transition: 0.5s;
+        transform: scale(1.1);
+      }
+      &::after {
+        height: 250%;
+        transition: all 600ms linear;
+        background-color: transparent;
+      }
     }
   }
 
@@ -7239,12 +7240,10 @@ ul {
 
   .project-card {
     position: relative;
-
     .project-image {
       overflow: hidden;
       position: relative;
       border-radius: 10px;
-
       img {
         transition: all 0.5s ease-out;
 
@@ -7252,7 +7251,6 @@ ul {
           width: 100%;
         }
       }
-
       &::after {
         position: absolute;
         width: 500%;
@@ -7265,7 +7263,6 @@ ul {
         z-index: 1;
       }
     }
-
     .project-content-wrap {
       position: absolute;
       left: 0%;
@@ -7307,7 +7304,6 @@ ul {
 
       }
     }
-
     .project-image {
       &:hover {
         img {
@@ -7337,6 +7333,9 @@ ul {
   @include xxl-down-device(){
     padding: 90px 25px;
     background-position: left;
+  }
+  @include sm-mobile-device(){
+    padding: 90px 0;
   }
   .section-title {
 
@@ -7398,6 +7397,9 @@ ul {
     padding: 23px 38px;
     border-radius: 10px;
     position: relative;
+    @include sm-down-device(){
+      padding: 23px 15px;
+    }
     p{
       font-family: var(--font-Hanken);
       font-weight: 300;
@@ -7407,6 +7409,10 @@ ul {
       @include xxl-down-device(){
         font-size: 20px;
         line-height: 30px;
+      }
+      @include sm-down-device(){
+        font-size: 16px;
+        line-height:1.5rem;
       }
     }
     .quote-icon {
@@ -7458,6 +7464,9 @@ ul {
   position: relative;
   @include xxl-down-device(){
     padding:35px 40px;
+  }
+  @include sm-down-device(){
+    padding: 20px 20px;
   }
   .testimonial-ellipse{
     position: absolute;
@@ -8271,6 +8280,7 @@ ul {
 
               @include md-down-device() {
                 font-size: 18px;
+                line-height: 25px;
               }
 
               @include sm-down-device() {
@@ -8305,7 +8315,12 @@ ul {
                 font-weight: 700;
                 background: rgba(238, 233, 227, 1);
                 color: var(--title-color);
-
+                @include md-device(){
+                  right: 15px;
+                }
+                @include md-down-device(){
+                  right: 20px;
+                }
                 @include sm-down-device() {
                   background: none;
                   right: 5px;
@@ -8329,6 +8344,7 @@ ul {
 
                   @include sm-down-device() {
                     background: none;
+                    color: var(--title-color);
                   }
                 }
 
@@ -8578,6 +8594,9 @@ ul {
       color: var(--title-color);
       max-width: 563px;
       width: 100%;
+      @include lg-device(){
+        margin-bottom: 20px;
+      }
     @include lg-down-device(){
       margin-bottom: 20px;
     }
@@ -8732,7 +8751,10 @@ ul {
           @include xxl-down-device() {
             font-size: 21px;
           }
-
+          @include md-device(){
+            font-size: 20px;
+          }
+                
           @include lg-device() {
             font-size: 24px;
           }
