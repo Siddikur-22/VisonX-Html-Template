@@ -1374,13 +1374,13 @@ ul {
 .primary-btn-three {
   border-radius: 5px;
   background-color: var(--primary-color);
-  font-family: var(--font-inter);
-  font-weight: 600;
+  font-family: var(--font-Instrument);
+  font-weight: 500;
   font-size: 16px;
   color: var(--white-color);
   letter-spacing: 0.48px;
   line-height: 1;
-  padding: 20px 35px;
+  padding: 20px 29px;
   position: relative;
   align-items: center;
   display: inline-flex;
@@ -1389,6 +1389,13 @@ ul {
   overflow: hidden;
   z-index: 1;
   white-space: nowrap;
+}
+.primary-btn-three.two {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  font-size: 18px;
+  line-height: 1.3rem;
+  padding: 20px 39px;
 }
 @media (max-width: 576px) {
   .primary-btn-three {
@@ -4913,6 +4920,9 @@ ul {
   background-color: var(--primary-color-opc-2);
   border-radius: 50%;
 }
+.home1-about-section .about-content .featured-card .icon:hover svg {
+  animation: bounceIn 1s linear;
+}
 .home1-about-section .about-content .featured-card .content {
   max-width: 355px;
   width: 100%;
@@ -6339,7 +6349,7 @@ ul {
 }
 .home1-latest-project-section .project-content:hover {
   background-color: var(--primary-color);
-  transition: all 0.5s;
+  transition: all 0.6s ease-in-out;
 }
 .home1-latest-project-section .project-content:hover .category a {
   border: 1px solid var(--white-color-opp);
