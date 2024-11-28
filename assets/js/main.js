@@ -21,25 +21,6 @@
 	});
 
 
-  const element = document.querySelectorAll(".badge__char");
-  const step = 360 / element.length;
-
-  element.forEach((elem, i) => {
-    elem.style.setProperty("--char-rotate", i * step + "deg");
-  });
-
-  const foo = 360 / 7;
-
-  for (let i = 0; i <= 7; i++) {
-    console.log(i * foo + "deg");
-  }
-
-  // //Counter up
-  // $('.counter').counterUp({
-  // 	delay: 10,
-  // 	time: 1500
-  // });
-
   // ====================
   // Progrees Bar
   // ====================
@@ -85,9 +66,6 @@
 		setInterval(__followImageCursor(event, item), 100);
 	  });
 	});
-
-
-
 
   //home1-banner-slider
   var swiper = new Swiper(".banner-img-slider", {
@@ -202,6 +180,18 @@
     jQuery(this).parent().siblings().children(".active").removeClass("active");
   });
   //  right sidebar end
+
+	//Scroll Down Button
+	const scrollBtn = document.querySelector('#scroll-btn');
+	if (scrollBtn) { 
+		scrollBtn.addEventListener('click', function(e) {
+			e.preventDefault();
+			document.querySelector('#scroll-section').scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+	}
+
 
 
 })(jQuery);

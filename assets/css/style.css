@@ -2027,18 +2027,6 @@ ul {
   color: var(--primary-color);
 }
 
-@keyframes fade-down {
-  0% {
-    opacity: 0;
-    transform: scaleY(0);
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-    visibility: visible;
-  }
-}
 header.style-1 {
   position: relative;
   width: 100%;
@@ -2989,6 +2977,23 @@ header.style-1 .main-menu > ul li.menu-item-has-children > i {
   border-bottom: 1px solid rgba(var(--title-color-opc), 0.08);
 }
 
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+  }
+}
+@keyframes textRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .home1-banner-section {
   position: relative;
   padding: 55px 106px 55px 156px;
@@ -3190,108 +3195,45 @@ header.style-1 .main-menu > ul li.menu-item-has-children > i {
     display: none;
   }
 }
-
-.video-area .badge {
+.home1-banner-section .circular-text .scroll-down-btn {
+  background-color: var(--theme-color);
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 130px;
-  height: 130px;
-  border-radius: 100%;
-  animation: identifier 20s linear infinite;
-  position: absolute;
-  bottom: 0%;
-  left: 49%;
-  z-index: 9999;
-  background-color: var(--title-color);
-  padding: 5px;
-}
-.video-area .badge.two {
-  background-color: var(--white-color-opp);
-  border: 1px solid var(--title-color);
-  bottom: 42%;
-  left: 50%;
-}
-.video-area .badge.two .badge__char {
-  color: var(--title-color);
-}
-@media (max-width: 1499px) {
-  .video-area .badge.two {
-    left: 46%;
-  }
-}
-@media (max-width: 1399px) {
-  .video-area .badge {
-    left: 47%;
-    bottom: 0%;
-  }
-}
-@media (max-width: 1199px) {
-  .video-area .badge {
-    width: 110px;
-    height: 110px;
-    left: 45%;
-    bottom: 0%;
-  }
-}
-@media (min-width: 1400px) and (max-width: 1599px) {
-  .video-area .badge {
-    left: 48%;
-  }
-}
-@media (max-width: 767px) {
-  .video-area .badge {
-    display: none;
-  }
-}
-.video-area .badge .play {
-  margin: 0;
-  border-radius: 50%;
-  animation: identifier 20s linear infinite;
-  animation-direction: reverse;
-  transition: all 0.3s;
+  justify-content: center;
   height: 63px;
-  width: 63px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(245, 240, 234);
-}
-.video-area .badge .play .play-icon {
-  text-align: center;
-  padding: 10px;
-}
-.video-area .badge .badge__char {
-  display: block;
+  width: 62px;
+  border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: calc(50% - 5px);
-  height: 65px;
-  width: 10px;
-  background-repeat: round;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1;
-  font-weight: 500;
-  font-size: 13px;
-  color: var(--white-color);
+  right: 28%;
+  bottom: 28%;
+}
+
+.home1-banner-section .circular-text {
+  background-color: var(--title-color);
+  border-radius: 50%;
+  width: 146px;
+  height: 146px;
+  position: absolute;
+  right: 45%;
+  bottom: 0%;
+  z-index: 1;
+}
+
+.home1-banner-section .circular-text > svg {
+  width: 123px;
+  height: 123px;
+  animation: textRotation 20s linear infinite;
+  position: absolute;
+  top: 7%;
+  right: 8%;
+}
+
+.home1-banner-section .circular-text > svg text textpath {
+  fill: var(--white-color);
   font-family: var(--font-Hanken);
-  transform-origin: bottom center;
-  transform: rotate(var(--char-rotate));
-  padding: 5px;
-}
-@media (max-width: 1199px) {
-  .video-area .badge .badge__char {
-    height: 55px;
-  }
-}
-@keyframes identifier {
-  0% {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(1turn);
-  }
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
 }
 
 .social-list-one {
@@ -5316,7 +5258,7 @@ header.style-1 .main-menu > ul li.menu-item-has-children > i {
   margin-bottom: 37px;
   font-size: 30px;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 36px;
 }
 .home1-latest-project-section .project-content .section-title h3 a {
   color: var(--title-color);
@@ -5599,6 +5541,7 @@ header.style-1 .main-menu > ul li.menu-item-has-children > i {
   background-color: var(--white-color);
   border-radius: 10px;
   padding: 12px;
+  border: 1px solid rgba(255, 85, 41, 0.2);
 }
 .team-slider-area .team-card .team-img {
   position: relative;
