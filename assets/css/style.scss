@@ -10,7 +10,7 @@
   --theme-color: rgba(245, 240, 234, 1);
   --theme-color-two: rgba(231, 235, 235, 1);
   --primary-color: rgba(254, 94, 58, 1);
-  --primary-color-opc: rgba(254, 94, 58, 0.05);
+  --primary-color-opc: rgba(254, 94, 58, 0.5);
   --primary-color-opc-2: rgba(254, 94, 58, 0.2);
   --title-color: rgba(17, 17, 17, 1);
   --title-color-opp: rgba(17, 17, 17, 0.9);
@@ -1352,11 +1352,10 @@ ul {
   border-radius: 5px;
   background-color: var(--title-color);
   font-family: var(--font-inter);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: var(--white-color);
-  letter-spacing: 0.48px;
-  line-height: 1;
+  line-height: 19px;
   padding: 18px 32px;
   position: relative;
   align-items: center;
@@ -1462,8 +1461,7 @@ ul {
   font-weight: 500;
   font-size: 16px;
   color: var(--white-color);
-  letter-spacing: 0.48px;
-  line-height: 1;
+  line-height: 19.2px;
   padding: 20px 29px;
   position: relative;
   align-items: center;
@@ -1479,6 +1477,13 @@ ul {
     font-size: 18px;
     line-height: 1.3rem;
     padding: 20px 39px;
+  }
+  &.three{
+    font-family: var(--font-Instrument);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    padding: 17px 33px;
   }
   @include sm-down-device() {
     font-size: 15px;
@@ -1671,29 +1676,21 @@ ul {
 
 }
 
-// section padding global start
-// .section-padding{
-
-// }
-// section padding global end
-// global button group end
 // section title global start
 .section-title {
   .sub-title {
-    a {
       font-family: var(--font-Hanken);
-      font-weight:500;
       font-size: 14px;
+      font-weight: 500;
       line-height: 20px;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.05em;
       color: var(--primary-color);
-      border: 1px solid var(--primary-color);
+      border: 1px solid var(--primary-color-opc);
       border-radius: 73px;
       text-transform: uppercase;
       margin-bottom: 20px;
       padding: 9px 20px;
       display: inline-block;
-    }
 
     &.dark-white {
       a {
@@ -1725,7 +1722,7 @@ ul {
   }
 
   .category {
-    margin-bottom: 8px;
+    margin-bottom:20px;
 
     a {
       font-family: var(--font-Hanken);
@@ -1797,7 +1794,6 @@ ul {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    letter-spacing: 0.48px;
     color: var(--paragraph-color-1);
     margin: 0;
 
@@ -1856,7 +1852,6 @@ ul {
     }
   }
 }
-
 // section title global end
 // sidebar menu start
 .right-sidebar-menu {
@@ -2251,20 +2246,32 @@ ul {
 
 // sidebar menu end
 // header style 1 start
-
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+  }
+}
 header.style-1 {
   position: relative;
   width: 100%;
   z-index: 999;
   transition: all 0.8s ease-out 0s;
-  padding:0 150px;
+  padding:0px 150px;
   border-bottom: 1px solid var(--border-color-2);
+  background-color: var(--white-color);
   @include seventeen-down-device(){
     padding:0 30px;
   }
   &.inner-page{
     position: relative;
-    background-color: var(--dark-white-color);
+    background-color: var(--white-color);
   }
  
   .header-logo {
@@ -2299,7 +2306,6 @@ header.style-1 {
     .mobile-menu-btn {
       display: none;
       visibility: hidden;
-
       @include lg-down-device() {
         display: flex;
         flex-direction: column;
@@ -2307,7 +2313,6 @@ header.style-1 {
         visibility: visible;
         justify-content: center;
         position: relative;
-
         svg {
           fill: var(--title-color);
         }
@@ -2339,7 +2344,7 @@ header.style-1 {
 
     a {
       color: var(--white-color);
-      font-family: var(--font-manrope);
+      font-family: var(--font-Hanken);
       font-weight: 500;
       font-size: 14px;
       line-height: 14px;
@@ -2434,7 +2439,7 @@ header.style-1 {
           margin: 0;
           display: none;
           min-width: 220px;
-          background: var(--dark-white-color);
+          background: var(--white-color);
           box-shadow: 0px 30px 80px rgba(134, 117, 212, 0.08);
           text-align: left;
           transform-origin: top;
@@ -2478,7 +2483,6 @@ header.style-1 {
               color: var(--title-color);
               font-weight: 400;
               font-family: var(--font-Hanken);
-              text-transform: uppercase;
               font-size: 13px;
               line-height: 1.3;
               -webkit-transition: all .4s ease-out 0s;
@@ -2491,7 +2495,7 @@ header.style-1 {
                 position: absolute;
                 bottom: -1px;
                 left: 0;
-                background: linear-gradient(90deg, #fff, var(--primary-color1), #fff);
+                background: linear-gradient(90deg, #fff, var(--primary-color), #fff);
                 width: 100%;
                 height: 1px;
                 -webkit-transform: scaleX(0);
@@ -2507,7 +2511,7 @@ header.style-1 {
                 border-color: rgba(233, 228, 228, .5);
 
                 &::before {
-                  background: linear-gradient(90deg, #ddd, #EFB93F, #ddd);
+                  background: linear-gradient(90deg, #ddd, #FE5E3A, #ddd);
                 }
               }
 
@@ -2568,7 +2572,7 @@ header.style-1 {
               position: absolute;
               max-width: 230px;
               min-width: 215px;
-              background: var(--dark-white-color);
+              background:var(--white-color);
               box-shadow: 0px 30px 80px rgba(8, 0, 42, 0.08);
               top: 0;
 
@@ -2779,7 +2783,6 @@ header.style-1 {
       .mobile-menu-btn {
         display: none;
         visibility: hidden;
-
         @include lg-down-device() {
           display: flex;
           flex-direction: column;
@@ -3365,565 +3368,6 @@ header.style-1 {
       }
     }
 
-    &.two {
-      padding: 0 20px;
-      position: relative;
-
-      @include xl-down-device() {
-        padding: 0 10px;
-      }
-
-      @include sm-down-device() {
-        padding: 0;
-      }
-
-      &.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        box-sizing: border-box;
-        background-color: var(--white-color);
-        box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
-        z-index: 9999;
-
-        @keyframes smooth-header {
-          0% {
-            transform: translateY(-30px);
-          }
-
-          100% {
-            transform: translateY(0px);
-          }
-        }
-      }
-    }
-
-    &.three {
-      padding: 0 130px;
-      border-bottom: 1px solid rgba(#fff, 0.1);
-
-      @include eighteen-down-device() {
-        padding: 0 110px;
-      }
-
-      @include xxl-device() {
-        padding: 0 70px;
-      }
-
-      @include xxl-down-device() {
-        padding: 0 40px;
-      }
-
-      @include xl-down-device() {
-        padding: 0 10px;
-      }
-
-      @include lg-down-device() {
-        padding: 0;
-      }
-
-      &.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        box-sizing: border-box;
-        background-color: var(--primary-color3);
-        box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
-        z-index: 9999;
-
-        @keyframes smooth-header {
-          0% {
-            transform: translateY(-30px);
-          }
-
-          100% {
-            transform: translateY(0px);
-          }
-        }
-      }
-
-      .primary-btn {
-        &:hover {
-          background-color: var(--white-color);
-          color: var(--title-color);
-        }
-      }
-
-      .main-menu {
-        ul {
-          >li {
-            >a {
-              color: var(--white-color);
-              text-transform: uppercase;
-              font-family: var(--font-Hanken);
-              font-weight: 500;
-              font-size: 14px;
-
-              @include lg-device() {
-                font-size: 13px;
-              }
-            }
-
-            ul.sub-menu {
-              background-color: var(--primary-color3);
-
-              >li {
-                i {
-                  color: var(--white-color);
-                }
-
-                .dropdown-icon {
-                  color: var(--white-color);
-                }
-
-                .dropdown-icon2 {
-                  color: var(--title-color);
-                  opacity: 1;
-                  top: 14px;
-                  right: 10px;
-                  font-size: 13px;
-
-                  @include xl-down-device() {
-                    &::before {
-                      content: "\f4fe";
-                    }
-                  }
-                }
-
-                >a {
-                  color: var(--white-color);
-                  border-bottom: 1px solid rgba(233, 228, 228, 0.25);
-
-                  &::before {
-                    background: linear-gradient(90deg, #7572fd, #7572fd, #fff);
-                  }
-
-                  &:hover {
-                    color: var(--primary-color);
-
-                    &::before {
-                      -webkit-transform: scale(1);
-                      transform: scale(1);
-                    }
-                  }
-
-                  &.active {
-                    color: var(--primary-color);
-
-                    &::before {
-                      -webkit-transform: scale(1);
-                      transform: scale(1);
-                    }
-                  }
-                }
-
-                &:last-child {
-                  a {
-                    border-bottom: none;
-
-                    &::before {
-                      display: none;
-                    }
-                  }
-
-                  .sub-menu {
-                    li {
-                      a {
-                        border-bottom: 1px solid #0d172014;
-
-                        &::before {
-                          display: block;
-                        }
-                      }
-
-                      &:last-child {
-                        a {
-                          border-bottom: none;
-
-                          &::before {
-                            display: none;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
-                &:hover {
-                  >a {
-                    color: var(--primary-color);
-                  }
-
-                  .dropdown-icon {
-                    color: var(--primary-color);
-                  }
-
-                  .dropdown-icon2 {
-                    color: var(--primary-color);
-                  }
-                }
-
-                &.active {
-                  >a {
-                    color: var(--primary-color);
-                  }
-
-                  .dropdown-icon {
-                    color: var(--primary-color);
-                  }
-
-                  .dropdown-icon2 {
-                    color: var(--primary-color);
-                  }
-                }
-
-                .sub-menu {
-                  left: 100%;
-                  // left: auto;
-                  // right: auto;
-                  position: absolute;
-                  max-width: 230px;
-                  min-width: 215px;
-                  background-color: var(--primary-color3);
-                  border: 1px solid rgba(233, 228, 228, 0.25);
-                  top: 0;
-
-                  &::before {
-                    display: none;
-                    visibility: hidden;
-                  }
-
-                  @media only screen and (max-width: 991px) {
-                    margin-left: 10px;
-                    position: unset;
-                    max-width: 230px;
-                    min-width: 215px;
-                    background: transparent;
-                    top: 0;
-                    border: unset;
-                    padding-left: 0;
-                  }
-
-                  >li {
-                    i {
-                      display: block;
-                    }
-                  }
-                }
-
-                &:last-child {
-                  border-bottom: none;
-                }
-              }
-            }
-
-            &:hover {
-              >a {
-                color: var(--primary-color);
-
-                @include lg-down-device() {
-                  border-color: transparent;
-                }
-              }
-
-              >ul.sub-menu {
-                @include lg-up-device() {
-                  display: block;
-                  animation: fade-up 0.45s linear;
-                }
-              }
-            }
-
-            &.active {
-              >a {
-                color: var(--primary-color);
-
-                @include lg-down-device() {
-                  border-color: transparent;
-                }
-              }
-
-              svg {
-                opacity: 1;
-              }
-
-              .dropdown-icon2 {
-                color: var(--primary-color);
-              }
-            }
-          }
-        }
-      }
-
-      .nav-right {
-        .right-sidebar-button {
-          svg {
-            fill: var(--white-color);
-          }
-        }
-
-        .mobile-menu-btn {
-          @include lg-down-device() {
-            svg {
-              fill: var(--white-color);
-            }
-          }
-        }
-      }
-
-      @media only screen and (max-width: 991px) {
-        .dropdown-icon {
-          color: var(--white-color);
-        }
-
-        .main-menu {
-          background: var(--primary-color3);
-          border-right: 1px solid rgba(233, 228, 228, 0.25);
-          box-shadow: 0px 2px 20px rgba(#000, 0.03);
-
-          &.show-menu {
-            transform: translateX(0);
-          }
-
-          .menu-list {
-            padding-top: 50px;
-            padding-bottom: 30px;
-          }
-
-          >ul {
-            >li {
-              display: block;
-              position: relative;
-              padding: 0;
-
-              i {
-                display: block;
-              }
-
-              a {
-                padding: 12px 0;
-                display: block;
-              }
-
-              ul.sub-menu {
-                >li {
-                  border-bottom: 1px solid transparent;
-
-                  a {
-                    color: var(--white-color);
-                    padding: 12px 0px;
-
-                    &:hover {
-                      color: var(--primary-color);
-                      margin-left: 10px;
-                    }
-                  }
-
-                  a.active {
-                    color: var(--primary-color);
-                  }
-
-                  i {
-                    color: var(--primary-color);
-                    right: -13px;
-
-                    @include lg-down-device() {
-                      right: 0;
-                    }
-                  }
-                }
-              }
-
-              .bi {
-                top: 8px;
-                font-size: 20px;
-                color: var(--white-color);
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &.four {
-      background-color: rgba(135, 135, 135, 0.3);
-      backdrop-filter: blur(3px);
-
-      // border-radius: 0 0 30px 30px;
-      @include eighteen-down-device() {
-        padding: 0 110px;
-      }
-
-      @include xxl-device() {
-        padding: 0 70px;
-      }
-
-      @include xxl-down-device() {
-        padding: 0 40px;
-      }
-
-      @include xl-down-device() {
-        padding: 0 10px;
-      }
-
-      @include lg-down-device() {
-        padding: 0;
-      }
-
-      &.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        box-sizing: border-box;
-        background-color: var(--primary-color3);
-        box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
-        z-index: 9999;
-
-        @keyframes smooth-header {
-          0% {
-            transform: translateY(-30px);
-          }
-
-          100% {
-            transform: translateY(0px);
-          }
-        }
-      }
-
-      .header-logo {
-        a {
-          img {
-            width: 150px;
-
-            @include lg-device() {
-              width: 130px;
-            }
-
-            @include sm-down-device() {
-              width: 130px;
-            }
-          }
-        }
-      }
-
-      .primary-btn3 {
-        font-size: 15px;
-        padding: 15px 27px;
-
-        @include lg-device() {
-          padding: 12px 20px;
-        }
-
-        &:hover {
-          background-color: var(--white-color);
-          color: var(--title-color);
-        }
-      }
-
-      .main-menu {
-        ul {
-          >li {
-            >a {
-              color: var(--white-color);
-              padding: 26px 25px;
-
-              @include xxl-down-device() {
-                font-size: 14px;
-                padding: 26px 20px;
-              }
-
-              @include xl-down-device() {
-                padding: 27px 15px;
-              }
-
-              @include lg-device() {
-                font-size: 13px;
-              }
-            }
-
-            ul.sub-menu {
-              top: 67px;
-            }
-
-            &:hover {
-              >a {
-                color: var(--primary-color);
-
-                @include lg-down-device() {
-                  border-color: transparent;
-                }
-              }
-
-              >ul.sub-menu {
-                @include lg-up-device() {
-                  display: block;
-                  animation: fade-up 0.45s linear;
-                }
-              }
-            }
-
-            &.active {
-              >a {
-                color: var(--primary-color);
-
-                @include lg-down-device() {
-                  border-color: transparent;
-                }
-              }
-
-              svg {
-                opacity: 1;
-              }
-
-              .dropdown-icon2 {
-                color: var(--primary-color);
-              }
-            }
-          }
-        }
-      }
-
-      .nav-right {
-        .right-sidebar-button {
-          svg {
-            fill: var(--white-color);
-          }
-        }
-
-        .mobile-menu-btn {
-          @include lg-down-device() {
-            svg {
-              fill: var(--white-color);
-            }
-          }
-        }
-      }
-
-      @media only screen and (max-width: 991px) {
-        backdrop-filter: unset;
-
-        .main-menu {
-          >ul {
-            >li {
-              a {
-                color: var(--title-color);
-                padding: 10px 0;
-                display: block;
-              }
-            }
-          }
-        }
-      }
-    }
 
     &.inner-page {
       border-bottom: 1px solid rgba(var(--title-color-opc), 0.08);
@@ -3948,24 +3392,20 @@ header.style-1 {
     padding: 50px 70px 40px 30px;
   }
   .banner-content {
-  
-    span{
-      a{
-        display: inline-block;
-        font-family: var(--font-Hanken);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing:0.8px ;
-        color:var(--primary-color);
-        background-color:rgba(254, 94, 58, 0.1);
-        padding: 9px 20px;
-        border: 1px solid rgba(254, 94, 58, 0.1);
-        border-radius: 30px;
-        margin-bottom: 29px;
-      }
-    }
-
+  .sub-title{
+    display: inline-block;
+    font-family: var(--font-Hanken);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color:var(--primary-color);
+    background-color:rgba(254, 94, 58, 0.1);
+    padding: 9px 20px;
+    border: 1px solid rgba(254, 94, 58, 0.1);
+    border-radius: 30px;
+    margin-bottom: 29px;
+  }
     h1 {
       color: var(--title-color);
       font-family:var(--font-Instrument);
@@ -3976,8 +3416,7 @@ header.style-1 {
       width: 100%;
       margin: 0;
       padding-bottom: 40px;
-      letter-spacing: 0.16px;
-
+      letter-spacing: 0.01em;
       @include lg-down-device() {
         font-size: 50px;
       }
@@ -4047,11 +3486,10 @@ header.style-1 {
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
-      letter-spacing: 0.16px;
+      letter-spacing: 0.02em;
       max-width: 688px;
       width: 100%;
       margin-bottom: 50px;
-
       @include xxl-down-device() {
         max-width: 450px;
         width: 100%;
@@ -4103,9 +3541,9 @@ header.style-1 {
 
       span {
         font-family: var(--font-Hanken);
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.52px;        
         color: var(--paragraph-color-1);
       }
     }
@@ -4909,9 +4347,9 @@ header.style-1 {
           font-size: 20px;
           line-height: 27px;
           color: var(--title-color);
-          margin-bottom: 15px;
+          margin-bottom:20px;
           @include xxl-down-device(){
-            margin-bottom: 10px;
+            margin-bottom: 105x;
           }
          
         }
@@ -5226,26 +4664,39 @@ header.style-1 {
     }
     }
     .right-content{
-     
       p{
         max-width: 475px;
         width: 100%;
         color: rgba(255, 255, 255, 0.7);
         margin-bottom: 30px;
-      @include lg-device(){
-        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 24px;
       }
       }
       .primary-button {
-        color: var(--primary-color);
-        text-decoration: underline;
+        color:var(--primary-color);
+        font-family:var(--font-Instrument);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27.2px;
+        white-space: nowrap;
+        display: inline-flex ;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+        padding-bottom: 2px;
+        background: linear-gradient(to bottom, #FE5E3A 0%, #FE5E3A 98%);
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: left 100%;
+        transition: background-size 0.75s;
     
         &:hover {
           color: var(--white-color);
-    
+          background-size: 0 1px;
+          background-position: 0% 100%;
           svg {
             transform: rotate(45deg);
-    
             path {
               fill: var(--white-color);
             }
@@ -5254,15 +4705,13 @@ header.style-1 {
       }
     }
   }
-  
-
   .services-wrap {
     .single-services {
       transition: 0.5s;
       border-bottom: 1px solid var(--border-color-1);
       position: relative;
       display: grid;
-      grid-template-columns: 10% 45% 33% 12%;
+      grid-template-columns: 10% 47% 33% 10%;
       z-index: 1;
     @include md-down-device(){
       display: block;
@@ -5320,9 +4769,7 @@ header.style-1 {
       }
 
       h5 {
-        padding: 47px 45px 45px;
-        max-width: 405px;
-        width: 100%;
+        padding: 47px 80px 45px;
         margin-bottom: 0;
         @include md-down-device(){
           padding: 0;
@@ -5330,35 +4777,15 @@ header.style-1 {
         a {
           color: var(--white-color);
           font-family: var(--font-Hanken);
+          font-family: Instrument Sans;
           font-size: 32px;
-          line-height: 3rem;
+          line-height: 60px;
           font-weight: 400;
           margin-bottom: 0;
           transition: 0.5s;
 
           @include lg-down-device() {
             font-size: 22px;
-          }
-
-          span {
-            color: var(--white-color);
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 0;
-            transition: 0.5s;
-            display: block;
-
-            @include lg-down-device() {
-              font-size: 17px;
-            }
-          }
-
-          @include md-down-device() {
-            font-size: 20px;
-
-            span {
-              font-size: 16px;
-            }
           }
         }
       }
@@ -5399,7 +4826,7 @@ header.style-1 {
           font-family: var(--font-inter);
           font-size: 16px;
           font-weight: 400;
-          line-height: 30px;
+          line-height: 27.2px;
           margin-bottom: 0;
         }
       }
@@ -5446,6 +4873,11 @@ header.style-1 {
           -webkit-text-fill-color: var(--primary-color);
          }
         }
+        h5{
+          a{
+            color: var(--primary-color);
+          }
+        }
         .services-img {
           opacity: 1;
         }
@@ -5470,8 +4902,6 @@ header.style-1 {
       }
     }
   }
-}
-
 .home2-solutions-section {
   background-image: url("../image/banner-img/service-bg.png");
   background-position: center;
@@ -6384,7 +5814,7 @@ header.style-1 {
     img {
       height: 100%;
       object-fit: cover;
-
+      transition:all 0.5s ease-in-out;
     }
     &::after{
       position: absolute;
@@ -6399,7 +5829,6 @@ header.style-1 {
     }
     &:hover {
       img {
-        transition: 0.5s;
         transform: scale(1.1);
       }
       &::after {
@@ -6417,6 +5846,7 @@ header.style-1 {
     background-size: cover;
     padding: 46px 30px;
     border-radius: 10px;
+    transition:all 0.5s ease-in-out;
     @include xxl-down-device() {
       padding: 23px;
     }
@@ -6425,20 +5855,23 @@ header.style-1 {
       width: 100%;
 
       h3 {
-        margin-bottom: 20px;
+      margin-bottom: 37px;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 38px;
+
        a{
         color: var(--title-color);
        }
       }
 
       p {
-        margin-bottom: 36px;
+        margin-bottom: 43px;
         color: var(--paragraph-color-1);
       }
     }
     &:hover{
       background-color: var(--primary-color);
-      transition:all 0.6s ease-in-out;
       .category{
         a{
           border: 1px solid var(--white-color-opp);
@@ -6633,7 +6066,7 @@ header.style-1 {
             font-family: var(--font-Hanken);
             font-weight: 400;
             font-size: 16px;
-            line-height: 19px;
+            line-height: 16px;
             margin: 0;
             color: var(--white-color-opp);
           }
@@ -6645,7 +6078,7 @@ header.style-1 {
   }
   .testimonial-card-1{
     background-color:var(--white-color);
-    padding: 23px 38px;
+    padding: 30px 36px;
     border-radius: 10px;
     position: relative;
     @include sm-down-device(){
@@ -6655,8 +6088,8 @@ header.style-1 {
       font-family: var(--font-Hanken);
       font-weight: 300;
       font-size: 22px;
-      line-height: 37px;
-      letter-spacing: 0.16px;
+      line-height: 37.4px;
+      letter-spacing: 0.01em;
       @include xxl-down-device(){
         font-size: 20px;
         line-height: 30px;
@@ -6710,7 +6143,7 @@ header.style-1 {
   }
   .testimonial-swiper-wrapper{
   background-color: rgba(255, 255, 255, 0.05);
-  padding:45px 60px;
+  padding:67px 60px;
   border-radius: 30px;
   position: relative;
   @include xxl-down-device(){
@@ -6770,35 +6203,18 @@ header.style-1 {
       overflow: hidden;
 
       h5 {
+        font-family: var(--font-Instrument);
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 28px;
         margin-bottom: 0;
-
-        a {
-          color: var(--title-color);
-          font-family: var(--font-Hanken);
-          font-size: 24px;
-          line-height: 28px;
-          font-weight: 600;
-          transition: 0.5s;
-          margin-bottom: 0;
-
-          @include lg-device() {
-            font-size: 22px;
-          }
-
-          @include sm-down-device() {
-            font-size: 22px;
-          }
-
-          &:hover {
-            color: var(--primary-color1);
-          }
-        }
+        color: var(--title-color);
       }
 
       span {
         font-family: var(--font-Hanken);
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 18px;
         color: var(--paragraph-color-1);
         margin: 0;
@@ -7519,9 +6935,9 @@ header.style-1 {
 
             .accordion-button {
               font-family:var(--font-Instrument);
-              font-size: 22px;
+              font-size: 20px;
               font-weight: 500;
-              line-height: 1;
+              line-height: 28px;
               text-align: left;
               color: var(--title-color);
               padding: 30px 40px 28px;
@@ -7853,12 +7269,12 @@ header.style-1 {
     }
     }
     .right-content{
-     
       p{
         max-width: 475px;
         width: 100%;
         color:var(--paragraph-color-1);
         margin-bottom: 30px;
+        letter-spacing: 0.01em;
         font-family: var(--font-Instrument);
       }
       .primary-button {
@@ -7981,7 +7397,7 @@ header.style-1 {
     }
 
     .card-content {
-      padding: 24px 17px;
+      padding: 30px 25px;
       border: 1px solid var(--border-color-2);
       border-radius: 0 0 10px 10px;
 
@@ -7998,7 +7414,7 @@ header.style-1 {
           font-weight: 500;
           font-size: 24px;
           line-height: 30px;
-
+          text-transform: capitalize;
           @include xxl-down-device() {
             font-size: 21px;
           }
@@ -8039,8 +7455,7 @@ header.style-1 {
 
         p {
           text-transform: capitalize;
-          font-size: 16px;
-
+          font-size: 15px;
           @include xl-down-device() {
             font-size: 15px;
           }
@@ -8154,13 +7569,14 @@ header.style-1 {
       }
 
       p {
-        font-family: var(--font-Hanken);
+        font-family:var(--font-Hanken);
         font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
+        font-size: 15px;
+        line-height: 25px;
         color: var(--paragraph-color-1);
         margin: 0;
-        padding-bottom: 27px;
+        padding-bottom: 28px;
+        text-transform: capitalize;
       }
 
       .blog-meta {
@@ -8413,7 +7829,17 @@ header.style-1 {
     @include sm-down-device() {
       padding: 62px 30px;
     }
+    .section-title {
+    h2{
+      font-family: var(--font-Instrument);
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 62px;
+      letter-spacing: 0.02em;
+      color: var(--white-color);
+    }
 
+    }
     .cta-information {
       margin: 12px 0 27px;
 
@@ -8427,19 +7853,20 @@ header.style-1 {
         display: flex;
         align-items: center;
         gap: 40px;
-        flex-wrap: wrap;
-
         @include xxl-down-device() {
           gap: 20px;
         }
 
         .social-info {
+          display: flex;
+          align-items: center;
           a {
             color: rgba(235, 235, 235, 1);
             font-family: var(--font-Hanken);
-            font-weight: 400;
             font-size: 16px;
-            line-height: 21px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.02em;
             margin: 0;
           }
 
@@ -8569,7 +7996,7 @@ header.style-1 {
   }
 
   .footer-menu-wrap {
-    padding: 100px 0;
+    padding: 90px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     .logo-and-social-media-area {
@@ -8587,14 +8014,13 @@ header.style-1 {
           width: 100%;
           color: var(--white-color-opp);
           text-transform: capitalize;
-          margin-bottom: 35px;
+          margin-bottom: 36px;
         }
       }
       .footer-social-list{
         display: flex;
         align-items: center;
         gap: 20px;
-        padding-top: 20px;
 
         li {
      
@@ -8628,12 +8054,23 @@ header.style-1 {
       .widget-title {
         h4 {
           font-family: var(--font-Hanken);
+          font-size: 19px;
           font-weight: 500;
-          font-size: 20px;
-          line-height: 30px;
+          line-height: 23.18px;
+          letter-spacing: 0.05em;
           color: var(--white-color);
-          margin: 0;
-          padding-bottom: 24px;
+          margin-bottom: 24px;
+          position: relative;
+          &::after{
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: 0;
+            width: 107px;
+            height: 2px;
+            border-radius: 10px;
+            background: linear-gradient(90.01deg, #FFFFFF 0.01%, rgba(255, 255, 255, 0) 102.8%);
+          }
 
           @include lg-device() {
             font-size: 19px;
@@ -8647,16 +8084,22 @@ header.style-1 {
             padding-bottom: 8px;
 
             a {
+              margin: 0;
+              color: var(--white-color-opp);
               font-family: var(--font-Hanken);
               font-weight: 400;
-              font-size: 18px;
-              line-height: 30px;
-              color: var(--white-color-opp);
-              margin: 0;
-
+              font-size: 15px;
+              line-height: 18.3px;
+              letter-spacing: 0.05em;
+              display: inline-block;
+              background: linear-gradient(to bottom, rgba(254, 94, 58, 1) 0%, rgba(254, 94, 58, 1) 98%);
+              background-repeat: no-repeat;
+              background-size: 0 1px;
+              background-position: 0% 100%;
+              transition: background-size 0.75s;
               &:hover {
-                color: var(--primary-color);
-                transition: 0.5s;
+                background-position: left 100%;
+                background-size: 100% 1px;
               }
             }
           }
@@ -8668,14 +8111,12 @@ header.style-1 {
       .content {
         p {
           font-family: var(--font-Hanken);
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 30px;
-          max-width: 350px;
-          width: 100%;
+          font-size: 19px;
+          font-weight: 500;
+          line-height: 23.18px;
           color: var(--white-color);
           margin: 0;
-          padding-bottom: 30px;
+          padding-bottom: 32px;
         }
       }
     }
@@ -8729,7 +8170,7 @@ header.style-1 {
       align-items: center;
       justify-content: space-between;
       display: flex;
-      padding-top: 28px;
+      padding: 28px 0;
       flex-wrap: wrap;
 
       @include md-device() {
@@ -8749,12 +8190,11 @@ header.style-1 {
       .copy-write-area {
         p {
           font-family: var(--font-Hanken);
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 30px;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 16.8px;
           color: var(--white-color-opp);
           margin: 0;
-
           @include md-device() {
             font-size: 17px;
           }
@@ -8800,13 +8240,12 @@ header.style-1 {
             a {
               font-family: var(--font-Hanken);
               font-weight: 400;
-              font-size: 18px;
-              line-height: 30px;
+              font-size: 14px;
+              line-height: 16.8px;
               color: var(--white-color-opp);
               margin: 0;
             }
           }
-
           span {
             color: var(--white-color-opp);
           }
