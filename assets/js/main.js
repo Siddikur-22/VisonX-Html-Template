@@ -4,7 +4,7 @@
 
 (function ($) {
   "use strict";
-	// Preloader 
+  // Preloader 
 	jQuery(window).on('load', function () {
 		$(".preloader").delay(1600).fadeOut("slow");
 	});
@@ -19,6 +19,25 @@
 	$('.menu-close-btn').on("click", function () {
 		$('.main-menu').removeClass('show-menu');
 	});
+		// Sidebar 
+    $('.sidebar-btn').on("click", function () {
+      $('.sidebar-area').addClass('active');
+    });
+    $('.sidebar-menu-close').on("click", function () {
+      $('.sidebar-area').removeClass('active');
+    });
+  
+    jQuery('.dropdown-icon').on('click', function () {
+      jQuery(this).toggleClass('active').next('ul').slideToggle();
+      jQuery(this).parent().siblings().children('ul').slideUp();
+      jQuery(this).parent().siblings().children('.active').removeClass('active');
+    });
+    jQuery('.dropdown-icon2').on('click', function () {
+      jQuery(this).toggleClass('active').next('.submenu-list').slideToggle();
+      jQuery(this).parent().siblings().children('.submenu-list').slideUp();
+      jQuery(this).parent().siblings().children('.active').removeClass('active');
+    });	
+	
 
 
   // ====================
@@ -52,20 +71,21 @@
 
   // ---------------
   // service image 
-  const serviceImgItem = document.querySelectorAll(".services-wrap .single-services ");
+	const serviceImgItem2 = document.querySelectorAll(".services-wrap .single-services");
 
-	function __followImageCursor(event, serviceImgItem) {
-	  const contentBox = serviceImgItem.getBoundingClientRect();
+	function __followImageCursor2(event, serviceImgItem2) {
+	  const contentBox = serviceImgItem2.getBoundingClientRect();
 	  const dx = event.clientX - contentBox.x;
 	  const dy = event.clientY - contentBox.y;
-	  serviceImgItem.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(12deg)`;
+	  serviceImgItem2.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
 	}
   
-	serviceImgItem.forEach((item, i) => {
+	serviceImgItem2.forEach((item, i) => {
 	  item.addEventListener("mousemove", (event) => {
-		setInterval(__followImageCursor(event, item), 100);
+		setInterval(__followImageCursor2(event, item), 100);
 	  });
 	});
+
 
   //home1-banner-slider
   var swiper = new Swiper(".banner-img-slider", {
