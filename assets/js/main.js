@@ -3,42 +3,43 @@
 // --------------------------
 
 (function ($) {
-  "use strict";
-  // Preloader 
-	jQuery(window).on('load', function () {
-		$(".preloader").delay(1600).fadeOut("slow");
-	});
+  ("use strict");
+  // Preloader
+  jQuery(window).on("load", function () {
+    $(".preloader").delay(1600).fadeOut("slow");
+  });
 
-	$('.sidebar-button').on("click", function () {
-        $(this).toggleClass('active');
-    });
+  $(".sidebar-button").on("click", function () {
+    $(this).toggleClass("active");
+  });
 
-	document.querySelector('.sidebar-button').addEventListener('click', () =>
-		document.querySelector('.main-menu').classList.toggle('show-menu'));
+  document
+    .querySelector(".sidebar-button")
+    .addEventListener("click", () =>
+      document.querySelector(".main-menu").classList.toggle("show-menu")
+    );
 
-	$('.menu-close-btn').on("click", function () {
-		$('.main-menu').removeClass('show-menu');
-	});
-		// Sidebar 
-    $('.sidebar-btn').on("click", function () {
-      $('.sidebar-area').addClass('active');
-    });
-    $('.sidebar-menu-close').on("click", function () {
-      $('.sidebar-area').removeClass('active');
-    });
-  
-    jQuery('.dropdown-icon').on('click', function () {
-      jQuery(this).toggleClass('active').next('ul').slideToggle();
-      jQuery(this).parent().siblings().children('ul').slideUp();
-      jQuery(this).parent().siblings().children('.active').removeClass('active');
-    });
-    jQuery('.dropdown-icon2').on('click', function () {
-      jQuery(this).toggleClass('active').next('.submenu-list').slideToggle();
-      jQuery(this).parent().siblings().children('.submenu-list').slideUp();
-      jQuery(this).parent().siblings().children('.active').removeClass('active');
-    });	
-	
+  $(".menu-close-btn").on("click", function () {
+    $(".main-menu").removeClass("show-menu");
+  });
+  // Sidebar
+  $(".sidebar-btn").on("click", function () {
+    $(".sidebar-area").addClass("active");
+  });
+  $(".sidebar-menu-close").on("click", function () {
+    $(".sidebar-area").removeClass("active");
+  });
 
+  jQuery(".dropdown-icon").on("click", function () {
+    jQuery(this).toggleClass("active").next("ul").slideToggle();
+    jQuery(this).parent().siblings().children("ul").slideUp();
+    jQuery(this).parent().siblings().children(".active").removeClass("active");
+  });
+  jQuery(".dropdown-icon2").on("click", function () {
+    jQuery(this).toggleClass("active").next(".submenu-list").slideToggle();
+    jQuery(this).parent().siblings().children(".submenu-list").slideUp();
+    jQuery(this).parent().siblings().children(".active").removeClass("active");
+  });
 
   // ====================
   // Progrees Bar
@@ -70,22 +71,54 @@
   });
 
   // ---------------
-  // service image 
-	const serviceImgItem2 = document.querySelectorAll(".services-wrap .single-services");
+  // All Buttons
+  let arr1 = gsap.utils.toArray("#btn_wrapper");
+  let arr2 = gsap.utils.toArray(".btn_wrapper");
+  const all_buttons = arr1.concat(arr2);
 
-	function __followImageCursor2(event, serviceImgItem2) {
-	  const contentBox = serviceImgItem2.getBoundingClientRect();
-	  const dx = event.clientX - contentBox.x;
-	  const dy = event.clientY - contentBox.y;
-	  serviceImgItem2.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
-	}
-  
-	serviceImgItem2.forEach((item, i) => {
-	  item.addEventListener("mousemove", (event) => {
-		setInterval(__followImageCursor2(event, item), 100);
-	  });
-	});
+  all_buttons.forEach((btn) => {
+    if (!btn.classList.contains("banner-btn")) {
+      gsap.from(btn, {
+        scrollTrigger: {
+          trigger: btn,
+          start: "top center+=150",
+          markers: false,
+        },
+        opacity: 0,
+        y: -70,
+        ease: "bounce",
+        duration: 1.5,
+      });
+    }
+  });
 
+  // Home4 Servises
+  jQuery(".home3-service-section .services-hover").on("mouseenter", function () {
+    $(this).toggleClass("active");
+    $(this).find(".service-bottom-wrap").slideToggle();
+  });
+
+  jQuery(".home3-service-section .services-hover").on("mouseleave", function () {
+    jQuery(this).find(".service-bottom-wrap").slideUp();
+    jQuery(this).siblings().removeClass("active");
+  });
+  // service image
+  const serviceImgItem2 = document.querySelectorAll(
+    ".services-wrap .single-services"
+  );
+
+  function __followImageCursor2(event, serviceImgItem2) {
+    const contentBox = serviceImgItem2.getBoundingClientRect();
+    const dx = event.clientX - contentBox.x;
+    const dy = event.clientY - contentBox.y;
+    serviceImgItem2.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
+  }
+
+  serviceImgItem2.forEach((item, i) => {
+    item.addEventListener("mousemove", (event) => {
+      setInterval(__followImageCursor2(event, item), 100);
+    });
+  });
 
   //home1-banner-slider
   var swiper = new Swiper(".banner-img-slider", {
@@ -201,17 +234,14 @@
   });
   //  right sidebar end
 
-	//Scroll Down Button
-	const scrollBtn = document.querySelector('#scroll-btn');
-	if (scrollBtn) { 
-		scrollBtn.addEventListener('click', function(e) {
-			e.preventDefault();
-			document.querySelector('#scroll-section').scrollIntoView({
-				behavior: 'smooth'
-			});
-		});
-	}
-
-
-
+  //Scroll Down Button
+  const scrollBtn = document.querySelector("#scroll-btn");
+  if (scrollBtn) {
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector("#scroll-section").scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  }
 })(jQuery);
