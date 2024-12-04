@@ -194,6 +194,49 @@
       },
     },
   });
+  // home3 testimonial 
+  	var swiper = new Swiper(".home3-testimonial-slider", {
+      slidesPerView: 1,
+      speed: 1500,
+      spaceBetween: 25,
+      autoplay: {
+        delay: 2500, // Autoplay duration in milliseconds
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination1",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".testimonial-slider-next",
+        prevEl: ".testimonial-slider-prev",
+      },
+
+      breakpoints: {
+        280: {
+          slidesPerView: 1,
+        },
+        386: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1400: {
+          slidesPerView: 3,
+        },
+      },
+    });
 
   // logo area marquee start
   $(".marquee_text").marquee({
