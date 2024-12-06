@@ -4,6 +4,19 @@
 
 (function ($) {
   ("use strict");
+
+
+	// sticky header
+	window.addEventListener('scroll', function () {
+		const header = document.querySelector('header.header-area');
+		header.classList.toggle("sticky", window.scrollY > 200);
+	});
+	window.addEventListener('scroll', function () {
+		const header = document.querySelector('header.header-area-three');
+		header.classList.toggle("sticky", window.scrollY > 200);
+	});
+
+
   // Preloader
   jQuery(window).on("load", function () {
     $(".preloader").delay(1600).fadeOut("slow");
@@ -93,15 +106,21 @@
   });
 
   // Home4 Servises
-  jQuery(".home3-service-section .services-hover").on("mouseenter", function () {
-    $(this).toggleClass("active");
-    $(this).find(".service-bottom-wrap").slideToggle();
-  });
+  jQuery(".home3-service-section .services-hover").on(
+    "mouseenter",
+    function () {
+      $(this).toggleClass("active");
+      $(this).find(".service-bottom-wrap").slideToggle();
+    }
+  );
 
-  jQuery(".home3-service-section .services-hover").on("mouseleave", function () {
-    jQuery(this).find(".service-bottom-wrap").slideUp();
-    jQuery(this).siblings().removeClass("active");
-  });
+  jQuery(".home3-service-section .services-hover").on(
+    "mouseleave",
+    function () {
+      jQuery(this).find(".service-bottom-wrap").slideUp();
+      jQuery(this).siblings().removeClass("active");
+    }
+  );
   // service image
   const serviceImgItem2 = document.querySelectorAll(
     ".services-wrap .single-services"
@@ -194,49 +213,49 @@
       },
     },
   });
-  // home3 testimonial 
-  	var swiper = new Swiper(".home3-testimonial-slider", {
-      slidesPerView: 1,
-      speed: 1500,
-      spaceBetween: 25,
-      autoplay: {
-        delay: 2500, // Autoplay duration in milliseconds
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination1",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".testimonial-slider-next",
-        prevEl: ".testimonial-slider-prev",
-      },
+  // home3 testimonial
+  var swiper = new Swiper(".home3-testimonial-slider", {
+    slidesPerView: 1,
+    speed: 1500,
+    spaceBetween: 25,
+    autoplay: {
+      delay: 2500, // Autoplay duration in milliseconds
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".testimonial-slider-next",
+      prevEl: ".testimonial-slider-prev",
+    },
 
-      breakpoints: {
-        280: {
-          slidesPerView: 1,
-        },
-        386: {
-          slidesPerView: 1,
-        },
-        576: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 2,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-        1400: {
-          slidesPerView: 3,
-        },
+    breakpoints: {
+      280: {
+        slidesPerView: 1,
       },
-    });
+      386: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  });
 
   // logo area marquee start
   $(".marquee_text").marquee({
@@ -261,6 +280,24 @@
     $(window).scrollTo({ top: 0, behavior: "smooth" });
   }
   // smooth scroll end
+  //Counter up
+  $(".counter").counterUp({
+    delay: 10,
+    time: 1500,
+  });
+
+  // Video Popup
+
+  $('[data-fancybox="gallery"]').fancybox({
+    buttons: ["close"],
+    loop: false,
+    protect: true,
+  });
+  $(".video-player").fancybox({
+    buttons: ["close"],
+    loop: false,
+    protect: true,
+  });
 
   // right sidebar start
   $(".right-sidebar-button").on("click", function () {
