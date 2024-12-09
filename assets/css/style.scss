@@ -2299,28 +2299,31 @@ header {
   &.dark-color {
     position: absolute;
     background-color: transparent;
-    &.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        box-sizing: border-box;
-        background-color: var(--white-color);
-        box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
-        z-index: 9999;
-      background-color: var(--title-color);
-        @keyframes smooth-header {
-          0% {
-            transform: translateY(-30px);
-          }
 
-          100% {
-            transform: translateY(0px);
-          }
+    &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      box-sizing: border-box;
+      background-color: var(--white-color);
+      box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
+      z-index: 9999;
+      background-color: var(--title-color);
+
+      @keyframes smooth-header {
+        0% {
+          transform: translateY(-30px);
+        }
+
+        100% {
+          transform: translateY(0px);
         }
       }
+    }
+
     .main-menu {
       display: inline-block;
       position: relative;
@@ -4791,7 +4794,6 @@ header {
       line-height: 24px;
       color: rgba(104, 104, 104, 1);
       margin: 0 auto;
-      padding-top: 22px;
 
     }
   }
@@ -4855,7 +4857,7 @@ header {
       width: 100%;
 
       h3 {
-        margin-bottom: 21px;
+        margin-bottom: 23px;
 
 
         a {
@@ -4870,7 +4872,7 @@ header {
       }
 
       p {
-        margin-bottom: 35px;
+        margin-bottom: 37px;
         color: var(--paragraph-color-1);
         transition: all 0.5s ease-in-out;
 
@@ -6234,6 +6236,10 @@ header {
         line-height: 62px;
         letter-spacing: 0.02em;
         color: var(--white-color);
+        @include big-mobile-device(){
+          font-size: 40px;
+          line-height: 50px;
+        }
       }
     }
 
@@ -6670,10 +6676,26 @@ header {
     background-repeat: no-repeat;
     overflow: hidden;
     position: relative;
-
+    @include xl-device(){
+      border-radius:0 50px 50px 0;
+    }
+    @include xl-down-device(){
+      max-width: 700px;
+      width: 100%;
+      border-radius: 0 50px 50px 0;
+    }
+    @include md-device(){
+    max-width: 900px;
+      width: 100%;
+    }
     .banner-content-wrap {
       padding: 191px 150px 201px 139px;
-
+      @include xl-device(){
+      padding: 70px 150px 95px 45px;
+      }
+      @include xl-down-device(){
+      padding: 70px 150px 95px 40px;
+      }
       .section-title {
         h1 {
           font-family: var(--font-Instrument);
@@ -6683,7 +6705,28 @@ header {
           color: var(--title-color);
           text-transform: capitalize;
           margin-bottom: 40px;
-
+          @include xl-device(){
+              font-size: 55px;
+              line-height: 1.1;
+              margin-bottom: 21px;
+          }
+          @include xl-down-device(){
+            max-width: 550px;
+            width: 100%;
+              font-size: 55px;
+                line-height: 1.1;
+                margin-bottom: 21px;
+          }
+          @include lg-device(){
+            font-size:45px;
+            max-width: 400px;
+            width: 100%;
+          }
+          @include md-device(){
+            max-width: 800px;
+            width: 100%;
+          }
+         
           span {
             color: var(--primary-color);
           }
@@ -6698,6 +6741,16 @@ header {
           margin-bottom: 64px;
           max-width: 629px;
           width: 100%;
+          @include xl-down-device(){
+            max-width: 500px;
+              width: 100%;
+              margin-bottom: 50px;
+          }
+          @include lg-device(){
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 30px;
+          }
         }
       }
 
@@ -6731,7 +6784,18 @@ header {
     top: 0%;
     right: 0%;
     padding: 45px 0;
-
+    @include xl-device(){
+      width: 50%;
+    }
+    @include xl-down-device(){
+      width: 50%;
+    }
+    @include lg-device(){
+      width: 48%;
+    }
+    @include lg-down-device(){
+      display: none;
+    }
     img {
       border-radius: 80px 0 0 80px;
     }
@@ -6742,10 +6806,13 @@ header {
     bottom: 42%;
     left: 44.4%;
     z-index: 999;
-
+    @include md-device(){
+      display: none;
+    }
     @include md-down-device() {
       display: none;
     }
+
   }
 
   .circular-text {
@@ -6809,6 +6876,7 @@ header {
 
     @include xxl-device() {
       left: 10px;
+      top: 45%;
     }
 
     @include xxl-down-device() {
@@ -6911,6 +6979,9 @@ header {
         line-height: 48px;
         text-align: center;
         color: var(--title-color);
+        @include xl-down-device(){
+          font-size: 40px;
+        }
       }
     }
 
@@ -6922,6 +6993,9 @@ header {
         line-height: 24px;
         text-align: center;
         color: var(--paragraph-color-1);
+        @include xl-down-device(){
+          font-size: 15px;
+        }
       }
     }
 
@@ -13151,6 +13225,26 @@ header {
           height: 1px;
           border-radius: 10px;
           background: linear-gradient(90.01deg, rgba(0, 0, 0, 0), rgba(51, 51, 51, 0.7));
+
+          @include xl-device() {
+            width: 45px;
+            left: 0%;
+            top: 6%;
+          }
+
+          @include xl-down-device() {
+            left: 3%;
+          }
+
+          @include md-up-device() {
+            display: none;
+          }
+          @include sm-device(){
+            left: 6%;
+          }
+          @include big-mobile-device(){
+            width: 19%;
+          }
         }
 
         .dot-1 {
@@ -13163,6 +13257,15 @@ header {
           height: 6px;
           border-radius: 10px;
           background: rgba(51, 51, 51, 0.7);
+
+          @include xl-device() {
+            left: 15%;
+          }
+
+          @include md-up-device() {
+            display: none;
+          }
+
         }
 
         .dot-2 {
@@ -13175,6 +13278,14 @@ header {
           height: 6px;
           border-radius: 10px;
           background: rgba(51, 51, 51, 0.7);
+
+          @include xl-device() {
+            right: 15%;
+          }
+
+          @include md-up-device() {
+            display: none;
+          }
         }
 
         .line-2 {
@@ -13187,6 +13298,26 @@ header {
           height: 1px;
           border-radius: 10px;
           background: linear-gradient(90.01deg, rgba(51, 51, 51, 0.7), rgba(0, 0, 0, 0));
+
+          @include xl-device() {
+            width: 45px;
+            right: 0%;
+            top: 6%;
+          }
+
+          @include xl-down-device() {
+            right: 3%;
+          }
+
+          @include md-up-device() {
+            display: none;
+          }
+            @include sm-device(){
+            right: 6%;
+          }
+           @include big-mobile-device(){
+            width: 19%;
+          }
         }
 
 
